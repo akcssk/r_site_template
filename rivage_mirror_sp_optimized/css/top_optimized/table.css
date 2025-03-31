@@ -1,0 +1,47 @@
+@charset "UTF-8";
+
+.table {
+	/*border-collapse: collapse;/*隣接するセルのボーダーを重ねて表示します。*/
+	margin:0 auto 0;
+	width:90%;
+}
+
+.table table {
+	max-width:100%;
+}
+.table table td,
+.table table th {
+	border-bottom:none;
+}
+
+/* ↓tableにスクロールバーを追加 ここから */
+/* tableにスクロールバーを追加 ここまで↑ */
+
+
+.table input[type="text"]{
+	width:100%;
+	list-style-type: none;
+	margin:0;
+	box-sizing:border-box;
+}
+.table input[type="submit"]{
+	margin:0;
+	box-sizing:border-box;
+	cursor:pointer;
+}
+
+
+
+@media only screen and (max-width:480px) {
+
+
+}
+
+/********************
+商品情報
+*/
+
+
+/********************
+配送料金
+*/

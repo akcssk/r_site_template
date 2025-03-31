@@ -1,0 +1,45 @@
+@charset "UTF-8";
+
+/********************
+ページ番号
+********************/
+
+ul.pager {
+      margin: 0 auto;
+      padding: 0;
+	}
+ul.pager li {
+	float: left;
+	margin-right: 5px;
+	font-weight: bold;
+	list-style: none;
+	}
+
+ul.pager li span{
+	display:block;
+	background:#ad073b;
+	border: 1px #ad073b solid;
+	color:#ffffff;
+	padding:0px 8px;
+	}
+ul.pager li a {
+	display:block;
+	background:#ffffff;
+	border: 1px #1370dc solid;
+	padding:0 8px;
+	color:#1370dc;
+	text-decoration:none;
+}
+ul.pager li a:link,
+ul.pager li a:visited {
+   
+}
+ul.pager li a:hover,
+ul.pager li a:active {
+	background:#1370dc;
+	color:#ffffff;
+}
+
+/********************
+物件画像スライダー
+********************/

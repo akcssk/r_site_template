@@ -1,0 +1,428 @@
+@charset "UTF-8";
+
+
+/*********************************************************
+ 共通
+*/
+section{
+	max-width:620px;
+	width:96%;
+	margin:0 auto 0;
+	display:block;
+	clear:both;
+	float:none;
+}
+input.searchWord{
+	height:26px;
+	width:80%;
+	float:left;
+	border:#333333 solid 2px;
+	border-radius:1px;
+	-moz-border-radius:1px;
+	margin-bottom:5px;
+	-webkit-border-radius:1px;
+	border-radius:1px;
+}
+input.searchWordBtn{
+	height:26px;
+	margin:0;
+	padding:0;
+	cursor:pointer;
+	min-width:18%;
+	max-width:18%;
+	width:18%;
+	float:left;
+	border:#333333 solid 2px;
+	background:#333333;
+	color:#fff;
+	font-weight:bold;
+	-webkit-appearance: none;
+	border-radius: 0;}
+/*リンクL*/
+/*リンクS*/
+
+/**************
+PC・SP切替
+***************/
+
+/*********************************************************
+ ヘッダー
+*/
+.firstSection2nd{
+	background:url(/images_sp/mainImg2nd.jpg) center top no-repeat;
+	background-size:cover;
+	position:relative;
+	height:300px;
+}
+
+.firstSection2nd h1 {
+	position:absolute;
+	top:5px;
+	left:5px;
+	font-size:0.5em;
+	color:#ffffff;
+}
+
+.firstSection2nd p.logo {
+	position:absolute;
+	top:20px;
+	left:20px;
+	width:230px;
+	height:auto;
+}
+
+.firstSection2nd p.message {
+	text-align:center;
+	width:90%;
+	color:#ffffff;
+	font-family:"游明朝 Light", YuMincho, "Noto Serif", "Sawarabi Mincho", "ヒラギノ明朝 Pro W3", "Hiragino Mincho Pro", HiraMinProN-W3, "ＭＳ Ｐ明朝", "MS PMincho", serif;
+	font-weight:bold;
+	font-size:1.3em;
+	line-height:1.3em;
+	position:absolute;
+	top:55%;
+	left:50%;
+	transform:translate(-50%,-50%);
+	-webkit-transform:translate(-50%,-50%);
+	-ms-transform:translate(-50%,-50%);
+	text-shadow: 0px 1px 3px rgba(0,0,0,0.3);
+}
+
+/*********************************************************
+ フッター
+*/
+footer{
+	width:100%;
+	max-width:640px;
+	margin:0 auto;
+}
+.copyright{
+	background:#000000;
+	color:#ffffff;
+	font-size:0.6em;
+	text-align:center;
+	padding:10px;
+}
+
+
+/*Calendar*/
+.calendarBox{
+	border: 1px solid #BEBEBE;
+	   -moz-border-radius:5px;
+	-webkit-border-radius:5px;
+	        border-radius:5px;
+	background:#fff;
+}
+table.calendar{
+	/*
+	border: 1px solid #BEBEBE;
+	   -moz-border-radius:5px;
+	-webkit-border-radius:5px;
+	        border-radius:5px;
+	background:#fff;
+	*/
+	font-size:0.8em;
+	color:#000;
+}
+table.calendar th,
+table.calendar td{
+	height:28px;
+	line-height:28px;
+	text-align:center;
+}
+table.calendar th{
+	background:#f6f6f6;
+}
+.holiday{
+	color:#B71414;
+}
+.today{
+	color:#0000FF;
+}
+
+/*SNS*/
+
+/*********************************************************
+ パンくず
+*/
+
+.pan{
+	width:100%;
+	margin:10px 0;
+	font-size:0.8em;
+	line-height:1.2em;
+	font-weight:bold;
+}
+.pan span{
+	display:inline-block;
+	vertical-align:middle;
+	width:20px;
+	height:20px;
+	background:url(../images/left/left_arr_right.gif) center 46% no-repeat;
+	margin-right:5px;
+}
+.pan img{
+	display:none;/*アイコン非表示*/
+	max-width:20px;
+	height:auto;
+}
+/*商品詳細*/
+.pan p{
+}
+.pan a{
+	color:333333;
+}
+
+/************************************************************
+トップページ
+************************************************************/
+/*重要なお知らせ（盆・年末年始等）トップページの一番上に表示）*/
+/*********************************************************
+トップページ カテゴリリンク
+*/
+/*ニュース*/
+
+/*おすすめ商品・ランキング・一覧*/
+
+
+/***
+indexのみの指定
+************************************************************************************************************************/
+/************************************************************
+4つの〇メニュー
+************************************************************/
+
+
+/************************************************************
+店舗案内
+************************************************************/
+
+
+/************************************************************
+中バナー2
+************************************************************/
+
+
+/************************************************************
+ニュース関連
+************************************************************/
+
+/*ニュース詳細ページ*/
+
+/************************************************************
+求人バナー
+************************************************************/
+
+/************************************************************
+instagram
+************************************************************/
+
+
+
+/***
+2階層目以降への指定
+************************************************************************************************************************/
+
+/************************************************************
+店舗案内
+************************************************************/
+.shop {
+	margin-bottom:20px;
+}
+.shop p {
+	width:90%;
+	margin:0 auto 20px;
+}
+.shop p img {
+	width:100%;
+}
+
+/************************************************************
+求人情報
+************************************************************/
+
+/************************************************************
+お問合せフォーム
+************************************************************/
+
+/************************************************************
+商品詳細
+************************************************************/
+.itemDetail {
+	width:100%;
+	margin:auto;
+}
+.itemPhoto {
+	width:100%;
+}
+.itemPhoto img {
+	width:100%;
+	border-radius: 10px;        /* CSS3草案 */  
+	-webkit-border-radius: 10px;    /* Safari,Google Chrome用 */  
+	-moz-border-radius: 10px;   /* Firefox用 */
+}
+.itemDetail  p.price {
+	text-align:right;
+	color:#cc0000;
+	font-size:1.4em;
+	font-weight:bold;
+	margin-bottom:20px;
+}
+.itemDetail > div {
+	width:100%;
+}
+.itemDetail > div dt {
+	color:#ad073b;
+	font-weight:bold;
+	font-size:1.2em;
+}
+.itemDetail > div dd {
+	padding:0;
+	margin:0;
+	width:100%;
+}
+.itemDetail > div ul.comment li {
+	padding:15px;
+	font-size:0.9em;
+	font-weight:bold;
+	line-height:1em;
+}
+.itemDetail > div ul.comment li:nth-child(odd) {
+	background:#f7f7f7;
+}
+.btnDetail {
+	margin:0 auto 30px;
+	width:80%;
+}
+.btnDetail a {
+	display:block;
+	text-align:center;
+	border-radius: 10px;        /* CSS3草案 */  
+	-webkit-border-radius: 10px;    /* Safari,Google Chrome用 */  
+	-moz-border-radius: 10px;   /* Firefox用 */
+	padding:20px 0;
+	background:#ad073b;
+	color:#ffffff;
+	font-size:1.2em;
+	font-weight:bold;
+}
+
+/************************************************************
+カフェメニュー
+************************************************************/
+
+
+
+
+
+/*******************************************
+レスポンシブ
+*/
+@media only screen and (max-width:480px) {
+}
+@media only screen and (max-width:380px) {
+}
+
+/******************************
+ご注文方法
+*/
+
+
+/******************************
+カテゴリページ
+*/
+
+/*一覧中カテ*/
+
+
+/*大カテ*/
+
+
+/*小カテ*/
+
+
+/*中カテ*/
+
+/*pager*/
+
+
+/******************************
+ショッピングカート
+*/
+
+/************************************************************
+商品詳細
+************************************************************/
+
+/******************************
+商取
+*/
+.fee_table { border:#cccccc solid 1px;}
+.fee_table dl{width:100%; margin:0; padding:0; clear:both;}
+.fee_table dt{width:50%; float:left; text-align:center; margin:0; padding:5px;}
+.fee_table dd{width:50%; float:left; text-align:center; margin:0; padding:5px;}
+.fee_table dl:nth-child(odd){ background:#f7f7f7;}
+.fee_table dl:after {
+  content: ".";  /* 新しい要素を作る */
+  display: block;  /* ブロックレベル要素に */
+  clear: both;
+  height: 0;
+  visibility: hidden;
+}
+
+
+/******************************
+商品詳細
+*/
+.prodDetailName{
+	width:100%;
+	padding:5px;
+	background:#f7f7f7;
+	border:#333333 solid 1px;
+	        border-radius:5px;
+	   -moz-border-radius:5px;
+	-webkit-border-radius:5px;
+	behavior: url("border-radius.htc");
+	font-weight:bold;
+	margin-bottom:5px;
+}
+
+/*詳細ページ商品写真slick*/
+
+/*カートまわり*/
+
+/*他の興味*/
+
+/*テーブル*/
+/**/
+table.prodInfo2{
+	border:#0127a1 solid 1px;
+	border-bottom:none;
+	margin-bottom:10px;
+}
+table.prodInfo2 tr{
+}
+table.prodInfo2 th,
+table.prodInfo2 td{
+	padding:10px;
+	border-bottom:#0127a1 solid 1px;
+	overflow-wrap: break-word;/*強制折返*/
+}
+table.prodInfo2 th{
+	border-right:1px solid #0127a1;
+	text-align:center;
+	background:#f7f7f7;
+	width:25%;
+	color:#0127a1;
+}
+
+
+
+/**/
+/*cart*/
+/************************************************************
+石の種類から選ぶ
+************************************************************/
+/************************************************************
+マイページ
+************************************************************/

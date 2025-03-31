@@ -1,0 +1,569 @@
+@charset "UTF-8";
+
+
+/*********************************************************
+ 共通
+*/
+section{
+	max-width:620px;
+	width:96%;
+	margin:0 auto 0;
+	display:block;
+	clear:both;
+	float:none;
+}
+input.searchWord{
+	height:26px;
+	width:80%;
+	float:left;
+	border:#333333 solid 2px;
+	border-radius:1px;
+	-moz-border-radius:1px;
+	margin-bottom:5px;
+	-webkit-border-radius:1px;
+	border-radius:1px;
+}
+input.searchWordBtn{
+	height:26px;
+	margin:0;
+	padding:0;
+	cursor:pointer;
+	min-width:18%;
+	max-width:18%;
+	width:18%;
+	float:left;
+	border:#333333 solid 2px;
+	background:#333333;
+	color:#fff;
+	font-weight:bold;
+	-webkit-appearance: none;
+	border-radius: 0;}
+/*リンクL*/
+/*リンクS*/
+
+/**************
+PC・SP切替
+***************/
+
+/*********************************************************
+ ヘッダー
+*/
+.boxBackstretch{
+	background:url(/images_sp/mainImg1.jpg) center bottom no-repeat;
+	width:100%;
+	height:500px;
+	padding-top:1.4453%;/*画像サイズが900×310（310÷900）*/
+	background-size:cover;
+	padding:20px 0;
+	display:table;
+	background-color:#6e001a !important;
+}
+.boxBackstretch h1 {
+	position:absolute;
+	top:5px;
+	left:5px;
+	font-size:0.5em;
+	color:#ffffff;
+}
+.boxBackstretch p.logo {
+	position:absolute;
+	top:20px;
+	left:20px;
+	width:230px;
+	height:auto;
+}
+.boxBackstretch p.message {
+	text-align:center;
+	width:90%;
+	color:#ffffff;
+	font-family:"游明朝 Light", YuMincho, "Noto Serif", "Sawarabi Mincho", "ヒラギノ明朝 Pro W3", "Hiragino Mincho Pro", HiraMinProN-W3, "ＭＳ Ｐ明朝", "MS PMincho", serif;
+	font-weight:bold;
+	font-size:1.3em;
+	line-height:1.3em;
+	position:absolute;
+	top:55%;
+	left:50%;
+	transform:translate(-50%,-50%);
+	-webkit-transform:translate(-50%,-50%);
+	-ms-transform:translate(-50%,-50%);
+	text-shadow: 0px 1px 3px rgba(0,0,0,0.3);
+}
+
+/*********************************************************
+ フッター
+*/
+footer{
+	width:100%;
+	max-width:640px;
+	margin:0 auto;
+}
+.copyright{
+	background:#000000;
+	color:#ffffff;
+	font-size:0.6em;
+	text-align:center;
+	padding:10px;
+}
+
+
+/*Calendar*/
+.calendarBox{
+	border: 1px solid #BEBEBE;
+	   -moz-border-radius:5px;
+	-webkit-border-radius:5px;
+	        border-radius:5px;
+	background:#fff;
+}
+table.calendar{
+	/*
+	border: 1px solid #BEBEBE;
+	   -moz-border-radius:5px;
+	-webkit-border-radius:5px;
+	        border-radius:5px;
+	background:#fff;
+	*/
+	font-size:0.8em;
+	color:#000;
+}
+table.calendar th,
+table.calendar td{
+	height:28px;
+	line-height:28px;
+	text-align:center;
+}
+table.calendar th{
+	background:#f6f6f6;
+}
+.holiday{
+	color:#B71414;
+}
+.today{
+	color:#0000FF;
+}
+
+/*SNS*/
+
+/*********************************************************
+ パンくず
+*/
+/*商品詳細*/
+
+/************************************************************
+トップページ
+************************************************************/
+/*重要なお知らせ（盆・年末年始等）トップページの一番上に表示）*/
+/*********************************************************
+トップページ カテゴリリンク
+*/
+/*ニュース*/
+.news {
+	width: 100%;
+	padding: 0px;
+	color:#333333;
+	font-size:0.9em;
+}
+.news a{
+	text-decoration:underline;
+}
+.news a:hover{
+}
+.news table{
+	border-bottom:#333333 dotted 1px;
+}
+
+/*おすすめ商品・ランキング・一覧*/
+
+
+/***
+indexのみの指定
+************************************************************************************************************************/
+/************************************************************
+4つの〇メニュー
+************************************************************/
+.tWorks {
+	padding:15px 0;
+	/*background:url(/images/index/menu4Bg.jpg) center top repeat-y;*/
+}
+.tWorks ul {
+	width:90%;
+	margin:auto;
+}
+.tWorks li dt,
+.tWorks li dd p {
+	text-align:center;
+}
+.tWorks li dd p {
+	font-family:"游明朝 Light", YuMincho, "Noto Serif", "Sawarabi Mincho", "ヒラギノ明朝 Pro W3", "Hiragino Mincho Pro", HiraMinProN-W3, "ＭＳ Ｐ明朝", "MS PMincho", serif;
+	color:#ad073b;
+	font-weight:bold;
+	font-size:1.2em;
+	margin:20px 0 10px;
+}
+.tWorks li dd {
+	font-size:0.9em;
+	width:90%;
+	margin:auto;
+}
+.tWorks li a {
+	display:block;
+	text-decoration:none;
+	color:#222222;
+}
+.tWorks li img {
+	margin:auto;
+}
+
+
+/************************************************************
+店舗案内
+************************************************************/
+.tShopinfo h2{
+	font-family:"游明朝 Light", YuMincho, "Noto Serif", "Sawarabi Mincho", "ヒラギノ明朝 Pro W3", "Hiragino Mincho Pro", HiraMinProN-W3, "ＭＳ Ｐ明朝", "MS PMincho", serif;
+	font-size:2.3em;
+	line-height:1em;
+	color:#ffffff;
+	text-align:center;
+
+	font-weight:normal;
+	border:none;
+	}
+.tShopinfo h2 span {
+	display:block;
+	font-size:0.6em;
+}
+.tShopinfo {
+	background:url(../images/index/guide_bg.gif) center top repeat;
+	font-family:"游明朝 Light", YuMincho, "Noto Serif", "Sawarabi Mincho", "ヒラギノ明朝 Pro W3", "Hiragino Mincho Pro", HiraMinProN-W3, "ＭＳ Ｐ明朝", "MS PMincho", serif;
+	padding:0 0 40px;
+}
+.tShopinfo ul li {
+	width:330px;
+	height:330px;
+	margin:0 auto 15px;
+	position:relative;
+	overflow: hidden;
+}
+.tShopinfo ul li:last-child {
+	margin:0 auto 0;
+}
+.tShopinfo ul li span {
+	position:absolute;
+	text-align:center;
+	top:50%;
+	left:50%;
+	transform:translate(-50%,-50%);
+	-webkit-transform:translate(-50%,-50%);
+	-ms-transform:translate(-50%,-50%);
+	width:50%;
+	color:#ffffff;
+	background:rgba(0,0,0,0.7); /* 黒 */
+	padding:10px;
+	margin:auto;
+	z-index:99;
+}
+.tShopinfo ul li span:hover {
+	background:#5d0009;
+}
+.tShopinfo ul li a {
+	display:block;
+}
+.tShopinfo ul li img {
+	display:block;
+	max-width:100%;
+  -webkit-transform: scale(1);
+  transform: scale(1);
+  -webkit-transition: .3s ease-in-out;
+  transition: .3s ease-in-out;
+}
+.tShopinfo ul li img:hover {
+  -webkit-transform: scale(1.1);
+  transform: scale(1.1);
+}
+
+
+/************************************************************
+中バナー2
+************************************************************/
+.banner2M {
+	/*background:url(../images/common/cakeBg.jpg) left top repeat;*/
+	padding:20px 0;
+	border-bottom:1px solid #dddddd;
+}
+.banner2M li {
+	width:90%;
+	margin:0 auto 15px;
+}
+.banner2M li:last-child {
+	margin:0 auto 0;
+}
+
+
+/************************************************************
+ニュース関連
+************************************************************/
+.topNews {
+	padding:0;
+}
+.topNews h2{
+	font-family:"游明朝 Light", YuMincho, "Noto Serif", "Sawarabi Mincho", "ヒラギノ明朝 Pro W3", "Hiragino Mincho Pro", HiraMinProN-W3, "ＭＳ Ｐ明朝", "MS PMincho", serif;
+	font-size:2.3em;
+	line-height:1em;
+	color:#ad073b;
+	text-align:center;
+	font-weight:normal;
+	border:none;
+	}
+.topNews h2 span {
+	display:block;
+	font-size:0.6em;
+	color:#222222;
+}
+.news {
+	width: 100%;
+	height:350px;
+	overflow-y:scroll;
+	}
+.news::-webkit-scrollbar{ width: 5px;}
+.news::-webkit-scrollbar-track{	background: #f7f7f7;}
+.news::-webkit-scrollbar-thumb {background: #dddddd;}
+.news li {
+	padding:15px 20px;
+	font-family:"游明朝 Light", YuMincho, "Noto Serif", "Sawarabi Mincho", "ヒラギノ明朝 Pro W3", "Hiragino Mincho Pro", HiraMinProN-W3, "ＭＳ Ｐ明朝", "MS PMincho", serif;
+	font-weight:bold;
+	border-bottom:1px dotted #cccccc;
+	line-height:1.3em;
+}
+.news li:nth-child(odd) {
+	background:#f7f7f7;
+}
+.news li a {
+	text-decoration:none;
+	color:#222222;
+}
+.news li span {
+	display:inline-block;
+	font-family: 游ゴシック体, 'Yu Gothic', YuGothic, 'ヒラギノ角ゴシック Pro', 'Hiragino Kaku Gothic Pro', メイリオ, Meiryo, Osaka, 'ＭＳ Ｐゴシック', 'MS PGothic', sans-serif;
+	font-weight:500;
+	font-size:0.9em;
+	padding:5px;
+	margin:0 0 5px 10px;
+	text-align:center;
+	background:#5d0009;
+	color:#960;
+	border-radius: 20px;        /* CSS3草案 */  
+	-webkit-border-radius: 20px;    /* Safari,Google Chrome用 */  
+	-moz-border-radius: 20px;   /* Firefox用 */
+	width:130px;
+	line-height:1em;
+}
+.news li span.shop {/* お知らせ */
+	background:#f4d7d9;
+}
+
+/*ニュース詳細ページ*/
+
+/************************************************************
+求人バナー
+************************************************************/
+.recruitBn {
+	background:#f4d7d9;
+	padding:15px;
+	margin-top:30px;
+	text-align:center;
+	color:#ffffff;
+	text-shadow: 0px 1px 3px rgba(0,0,0,0.1);
+	text-align:center;
+}
+.recruitBn div {
+	border:2px solid #fbe5e6;
+	padding:50px 0;
+}
+.recruitBnLeadCopy {
+	font-family:"游明朝 Light", YuMincho, "Noto Serif", "Sawarabi Mincho", "ヒラギノ明朝 Pro W3", "Hiragino Mincho Pro", HiraMinProN-W3, "ＭＳ Ｐ明朝", "MS PMincho", serif;
+	font-size:1.6em;
+	line-height:1em;
+	margin-bottom:15px;
+	font-weight:bold;
+	color:#ad073b;
+}
+.recruitTxt {
+	margin-bottom:15px;
+	font-size:1em;
+	line-height:1.3em;
+	color:#960;
+}
+.recruitLink {
+	display:block;
+	font-family:"游明朝 Light", YuMincho, "Noto Serif", "Sawarabi Mincho", "ヒラギノ明朝 Pro W3", "Hiragino Mincho Pro", HiraMinProN-W3, "ＭＳ Ｐ明朝", "MS PMincho", serif;
+	padding:7px;
+	border:1px solid #ad073b;;
+	width:50%;
+	margin:auto;
+	color:#ad073b;
+	font-weight:bold;
+}
+.recruitLink:hover {
+	background:#ad073b;
+	color:#ffffff;
+}
+
+/************************************************************
+instagram
+************************************************************/
+.instagram {
+	padding:30px 0 30px;
+}
+.instagram p {
+	margin:0 auto 25px;
+}
+.instagram p img {
+	margin:auto;
+	width:170px;
+}
+.instagram {
+  min-height: 1px;
+}
+.instagram:after {
+  content: ".";  /* 新しい要素を作る */
+  display: block;  /* ブロックレベル要素に */
+  clear: both;
+  height: 0;
+  visibility: hidden;
+}
+* html .instagram {
+  height: 1px;
+  /*\*//*/
+  height: auto;
+  overflow: hidden;
+  /**/
+}
+.instagram li {
+	float:left;
+	width:33.33%;
+}
+.instaWrap {
+    position:relative;
+    width:100%;
+    height:100%;
+    padding-top:50%;
+		overflow:hidden;
+}
+.instaWrap iframe{
+    position:absolute;
+    top:0;
+    left:0;
+    width:100%;
+    height:375px;
+		border:none;
+}
+
+
+
+/***
+2階層目以降への指定
+************************************************************************************************************************/
+
+/************************************************************
+店舗案内
+************************************************************/
+.shop {
+	margin-bottom:20px;
+}
+.shop p {
+	width:90%;
+	margin:0 auto 20px;
+}
+.shop p img {
+	width:100%;
+}
+.shop iframe {
+	margin-top:20px;
+}
+
+/************************************************************
+求人情報
+************************************************************/
+
+/************************************************************
+お問合せフォーム
+************************************************************/
+
+/************************************************************
+商品詳細
+************************************************************/
+
+/************************************************************
+カフェメニュー
+************************************************************/
+
+
+
+
+
+/*******************************************
+レスポンシブ
+*/
+@media only screen and (max-width:480px) {
+}
+@media only screen and (max-width:380px) {
+}
+
+/******************************
+ご注文方法
+*/
+
+
+/******************************
+カテゴリページ
+*/
+
+/*一覧中カテ*/
+
+
+/*大カテ*/
+
+
+/*小カテ*/
+
+
+/*中カテ*/
+
+/*pager*/
+
+
+/******************************
+ショッピングカート
+*/
+
+/************************************************************
+商品詳細
+************************************************************/
+
+/******************************
+商取
+*/
+
+
+/******************************
+商品詳細
+*/
+
+/*詳細ページ商品写真slick*/
+
+/*カートまわり*/
+
+/*他の興味*/
+
+/*テーブル*/
+/**/
+
+
+
+/**/
+/*cart*/
+/************************************************************
+石の種類から選ぶ
+************************************************************/
+/************************************************************
+マイページ
+************************************************************/

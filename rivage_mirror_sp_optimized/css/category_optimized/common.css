@@ -1,0 +1,173 @@
+@charset "UTF-8";
+
+/********************
+フォントサイズ
+********************/
+.TxtSmall  { font-size: 0.9em; line-height: 1.4em;}
+
+
+
+/************************************************************
+@font-face
+************************************************************/
+@font-face {
+  font-family: "Yu Gothic";
+  src: local("Yu Gothic Medium");
+  font-weight: 500;
+}
+@font-face {
+  font-family: "Yu Mincho";
+  src: local("Yu Mincho Demibold");
+  font-weight: 500;
+}
+@font-face {
+  font-family: "Hiragino Sans";
+  src: local(HiraginoSans-W3);
+  font-weight: 400;
+}
+
+/********************
+サイズ指定
+********************/
+
+
+/********************
+右寄せ・左寄せ指定
+********************/
+
+/********************
+フォントカラー
+********************/
+
+/********************
+余白
+********************/
+
+
+/*******************
+影
+*******************/
+
+/*******************
+角丸
+*******************/
+
+
+
+
+/********************
+段組
+********************/	
+
+/*2列*/
+
+/*3列*/
+
+
+
+/********************
+ボーダー
+********************/
+
+/*******************
+背景画像繰り返し
+*******************/
+
+/*******************
+スペーサー
+*******************/
+.mrgnB10 {margin-bottom:10px;}
+.mrgnB20 {margin-bottom:20px;}
+
+.mrgnT10 {margin-top:10px;}
+
+/********************
+リスト●表示
+********************/
+
+/********************
+リスト番号表示
+********************/
+
+
+/********************
+注釈（※）
+********************/
+
+/********************
+フォーム
+********************/
+input[type="submit"] ,
+input[type="button"] {
+	font-family: "メイリオ", Meiryo, Osaka, "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", "ＭＳ Ｐゴシック";
+	padding:10px 5px;
+	margin-left:auto;
+	margin-right:auto;
+	min-width:80%;
+	font-weight:bold;
+	cursor:pointer;
+	        border-radius: 3px;
+       -moz-border-radius: 3px;
+	-webkit-border-radius: 3px;
+	behavior: url(border-radius.htc); /* IE */
+
+	-webkit-appearance: none;/*iphoneのデフォルトボタン打消*/
+	border:#b9b8b8 solid 1px;
+	background:-webkit-gradient(
+		linear, left top, left bottom, 
+		from(#dddddd),
+		to(#f7f7f7));
+	background:-webkit-linear-gradient(top, #f7f7f7 0% , #dddddd 100%);
+	background:-moz-linear-gradient   (top, #f7f7f7 0% , #dddddd 100%);
+	background:-o-linear-gradient     (top, #f7f7f7 0% , #dddddd 100%);
+	background:-ms-linear-gradient    (top, #f7f7f7 0% , #dddddd 100%);
+	background:linear-gradient        (top, #f7f7f7 0% , #dddddd 100%);
+	filter: progid:DXImageTransform.Microsoft.gradient(
+		GradientType=0,startColorstr='#FFf7f7f7', endColorstr='#FFdddddd');/*IE10用（色の頭にFFが必要）*/
+}
+
+input[type="submit"]:hover,
+input[type="button"]:hover {
+	color:#aa1706;
+	background:#dddddd;
+}
+input[type="text"]{
+	font-family: "メイリオ", Meiryo, Osaka, "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", "ＭＳ Ｐゴシック";
+    padding: 5px;
+    box-sizing: border-box;
+    border-radius: 3px;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    box-shadow: none;
+    width: 100%;
+    border: 1px solid #b9b8b8;
+}
+
+/*必須*/
+
+
+/*******************
+クリアフィックス
+*******************/
+
+.clearfix:after {
+  content: ".";  /* 新しい要素を作る */
+  display: block;  /* ブロックレベル要素に */
+  clear: both;
+  height: 0;
+  visibility: hidden;
+}
+
+.clearfix {
+  min-height: 1px;
+}
+
+* html .clearfix {
+  height: 1px;
+  /*\*//*/
+  height: auto;
+  overflow: hidden;
+  /**/
+}
+

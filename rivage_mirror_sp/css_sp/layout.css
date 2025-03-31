@@ -1,0 +1,73 @@
+@charset "UTF-8";
+
+/*********************************************************
+ 共通
+*/
+section{
+	max-width:620px;
+	width:96%;
+	margin:0 auto 0;
+	display:block;
+	clear:both;
+	float:none;
+}
+
+/*********************************************************
+ ヘッダー
+*/
+.boxBackstretch{
+	background:url(/images_sp/mainImg1.jpg) center bottom no-repeat;
+	width:100%;
+	height:500px;
+	padding-top:1.4453%;/*画像サイズが900×310（310÷900）*/
+	background-size:cover;
+	padding:20px 0;
+	display:table;
+	background-color:#6e001a !important;
+}
+.boxBackstretch h1 {
+	position:absolute;
+	top:5px;
+	left:5px;
+	font-size:0.5em;
+	color:#ffffff;
+}
+.boxBackstretch p.logo {
+	position:absolute;
+	top:20px;
+	left:20px;
+	width:230px;
+	height:auto;
+}
+.boxBackstretch p.message {
+	text-align:center;
+	width:90%;
+	color:#ffffff;
+	font-family:"游明朝 Light", YuMincho, "Noto Serif", "Sawarabi Mincho", "ヒラギノ明朝 Pro W3", "Hiragino Mincho Pro", HiraMinProN-W3, "ＭＳ Ｐ明朝", "MS PMincho", serif;
+	font-weight:bold;
+	font-size:1.3em;
+	line-height:1.3em;
+	position:absolute;
+	top:55%;
+	left:50%;
+	transform:translate(-50%,-50%);
+	-webkit-transform:translate(-50%,-50%);
+	-ms-transform:translate(-50%,-50%);
+	text-shadow: 0px 1px 3px rgba(0,0,0,0.3);
+}
+
+/*********************************************************
+ フッター
+*/
+footer{
+	width:100%;
+	max-width:640px;
+	margin:0 auto;
+}
+.copyright{
+	background:#000000;
+	color:#ffffff;
+	font-size:0.6em;
+	text-align:center;
+	padding:10px;
+}
