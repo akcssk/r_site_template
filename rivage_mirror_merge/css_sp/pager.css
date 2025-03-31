@@ -1,0 +1,98 @@
+@charset "shift_jis";
+
+
+/********************
+ページ番号
+********************/
+
+ul.pager {
+      margin: 0 auto;
+      padding: 0;
+	}
+ul.pager li {
+	float: left;
+	margin-right: 5px;
+	font-weight: bold;
+	list-style: none;
+	}
+
+ul.pager li span{
+	display:block;
+	background:#ad073b;
+	border: 1px #ad073b solid;
+	color:#ffffff;
+	padding:0px 8px;
+	}
+ul.pager li a {
+	display:block;
+	background:#ffffff;
+	border: 1px #1370dc solid;
+	padding:0 8px;
+	color:#1370dc;
+	text-decoration:none;
+}
+ul.pager li a:link,
+ul.pager li a:visited {
+   
+}
+ul.pager li a:hover,
+ul.pager li a:active {
+	background:#1370dc;
+	color:#ffffff;
+}
+ul.pager li.prev,
+ul.pager li.next {
+	border: none;
+	padding:0 8px;
+	/*background:#fdf9f0;*/
+	}
+ul.pager li.prev a ,
+ul.pager li.next a {
+	/*background:#fdf9f0;*/
+}
+
+/********************
+物件画像スライダー
+********************/
+ul.sliderNavi {
+	list-style: none;
+	margin: 0;
+}
+
+ul.sliderNavi li {
+	background: url(../images/rent/slider_navi_off.png) no-repeat center top;
+	float: left;
+	margin-right: 5px;
+	width: 12px;
+	height: 12px;
+	cursor: pointer;
+}
+
+ul.sliderNavi li.active {
+	background: url(../images/rent/slider_navi_on.png) no-repeat center top;
+}
+
+.sliderThumbs.hide {
+	display:none;
+}
+
+.sliderThumb {
+	width:110px;
+	height:90px;
+	border:#cccccc solid 1px;
+	margin:3px 6px 6px 3px;
+	padding: 1px;
+}
+
+.sliderThumb.active {
+	width:110px;
+	height:90px;
+	border:#ae9a63 solid 4px;
+	margin:0 3px 3px 0;
+	padding: 1px;
+}
+
+a.swapPropertyImage img{
+	max-width : 110px;
+	max-height: 90px;
+}

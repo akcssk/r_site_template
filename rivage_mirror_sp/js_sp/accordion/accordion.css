@@ -1,0 +1,75 @@
+@charset "shift_jis"; 
+
+/********************
+アコーディオン　開閉式
+********************/
+.accordion{
+	margin-bottom:5px;
+}
+.accordionTitle{
+	font-weight:bold;
+	cursor:pointer;
+	background:#f7f7f7;
+	padding:5px;
+}
+.accordionTitle span{
+	float:right;
+	margin-left:5px;
+}
+.accordionTitle:after{
+  content: ".";  /* 新しい要素を作る */
+  display: block;  /* ブロックレベル要素に */
+  clear: both;
+  height: 0;
+  visibility: hidden;
+}
+.accordionBtn{
+}
+.accordionDetail{
+	display:none;
+	font-size:0.86em;
+	line-height:1.5em;
+}
+	.accordionDetail p a {
+		display:block;
+		width:100%;
+		padding:5px 15px;
+		border:1px solid #cccccc;
+		background: linear-gradient(#ffffff, #f7f7f7);
+		border-radius: 5px;        /* CSS3草案 */  
+		-webkit-border-radius: 5px;    /* Safari,Google Chrome用 */  
+		-moz-border-radius: 5px;   /* Firefox用 */
+		font-weight:bold;
+		margin-top:10px;
+		color:#222222 !important;
+		text-decoration:none !important;
+		}
+@media all and (-ms-high-contrast:none){ 
+  .accordionDetail p a { 
+    padding:8px 15px 2px 15px; /*上部3px足して、下部3px引く*/
+  } 
+}
+	.accordionDetail p a i {
+		margin-right:5px;
+		font-size:0.8em;
+	}
+	.accordionDetail span {
+		display:block;
+		font-weight:bold;
+	}
+	.accordionDetail span.caution {
+		display:block;
+		font-size:0.9em;
+		line-height:1.4em;
+		margin-top:5px;
+	}
+
+/*category一覧用*/
+.accordion2{
+	position:relative;
+}
+.accordionBtn2{
+}
+.accordionDetail2{
+	display:none;
+}

@@ -1,0 +1,80 @@
+@charset "utf-8";
+/* CSS Document */
+
+/**************************/
+#instafeed{}
+#instafeed li{
+	float:left;
+	position:relative;
+	list-style:none;
+	width:20%;
+	height:auto;
+}
+#instafeed li:nth-child(5n){
+	margin-right:0;
+}
+#instafeed:after {
+  content: ".";  /* 新しい要素を作る */
+  display: block;  /* ブロックレベル要素に */
+  clear: both;
+  height: 0;
+  visibility: hidden;
+}
+#instafeed li a{
+	display:block;
+	position:relative;
+}
+#instafeed li a:hover,
+#instafeed li a:active{
+	border-bottom:none;
+}
+#instafeed li a div{
+	display:none;
+	position:absolute;
+	top:0;
+	left:0;
+	width:100%;
+	height:100%;
+	text-align:center;
+	background:rgba(0,0,0,0.3);
+}
+#instafeed li a div *{ }
+#instafeed li a div span{
+	position:absolute;
+	width:100%;
+	bottom:15px;
+	left:0;
+	text-align:center;
+	color:#ffffff;
+}
+#instafeed li a div span img{ width:17px;display:inline-block; vertical-align:middle;margin:0 10px;}
+#instafeed li a:hover div span img,
+#instafeed li a:active div span img{
+	opacity:1;
+	filter: alpha(opacity=100);        /* ie lt 8 */
+	-ms-filter: "alpha(opacity=100)";  /* ie 8 */
+	-moz-opacity:1;                 /* FF lt 1.5, Netscape */
+	-khtml-opacity:1;              /* Safari 1.x */
+	}
+#instafeed li a:hover div,
+#instafeed li a:active div{
+	display:block;
+}
+
+@media only screen and (max-width:1139px){
+	#instafeed li{ margin-bottom:15px;}
+}
+@media only screen and (max-width: 768px){
+	#instafeed li{
+		width:32%;
+		height:auto;
+		margin-bottom:15px;
+	}
+	#instafeed li:nth-child(5n){margin-right:2%;}
+	#instafeed li:nth-child(3n){margin-right:0;}
+	#instafeed li:last-child{display:none;}/*3列の時は9個の表示*/
+}
+@media only screen and (max-width: 480px){
+	#instafeed li{ margin-bottom:5px;}
+}
+

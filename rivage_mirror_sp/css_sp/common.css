@@ -1,0 +1,480 @@
+@charset "shift_jis"; 
+
+/********************
+フォントサイズ
+********************/
+
+.TxtSmall2 { font-size: 0.8em; line-height: 1.4em;}
+.TxtSmall  { font-size: 0.9em; line-height: 1.4em;}
+.TxtLarge  { font-size: 1.2em; line-height: 1.5em;}
+.TxtLarge2 { font-size: 1.4em; line-height: 1.5em;}
+.txt_default{ font-size: 0.9em; line-height: 1.5em;}
+.txt_large  { font-size: 1.2em; line-height: 1.5em;}
+.txt_small  { font-size: 0.8em; line-height: 1.4em;}
+.txt_small2 { font-size: 0.7em; line-height: 1.4em;}
+
+
+
+/************************************************************
+@font-face
+************************************************************/
+@font-face {
+  font-family: "Yu Gothic";
+  src: local("Yu Gothic Medium");
+  font-weight: 500;
+}
+@font-face {
+  font-family: "Yu Mincho";
+  src: local("Yu Mincho Demibold");
+  font-weight: 500;
+}
+@font-face {
+  font-family: "Hiragino Sans";
+  src: local(HiraginoSans-W3);
+  font-weight: 400;
+}
+.ffYuMincho{
+	font-family:  "游明朝" , "Yu Mincho" , "游明朝体" , "YuMincho" , 'Noto Serif', 'Sawarabi Mincho', "ヒラギノ明朝 Pro W3" , "Hiragino Mincho Pro" , "HiraMinProN-W3" , "ＭＳ Ｐ明朝" , "MS PMincho" , serif;
+}
+.ffArial{
+	font-family:Arial, Helvetica, sans-serif, Yu Gothic Medium, "游ゴシック Medium", YuGothic, "游ゴシック体", "ヒラギノ角ゴ Pro W3", "メイリオ", "ＭＳ Ｐゴシック", "MS PGothic";
+}
+.fsItalic{
+	font-style:italic;
+}
+
+/********************
+サイズ指定
+********************/
+
+.w15{ width:15%; height:auto;}
+.w20{ width:20%; height:auto;}
+.w25{ width:25%; height:auto;}
+.w30{ width:30%; height:auto;}
+.w35{ width:35%; height:auto;}
+.w40{ width:40%; height:auto;}
+.w45{ width:45%; height:auto;}
+.w49{ width:49%; height:auto;}
+.w50{ width:50%; height:auto;}
+.w60{ width:60%; height:auto;}
+.w70{ width:70%; height:auto;}
+
+
+/********************
+右寄せ・左寄せ指定
+********************/
+.f_left{ float:left;}
+.f_right{ float:right;}
+.f_center{ clear:both; text-align:center; margin-left:auto; margin-right:auto;}
+.f_clear{ clear:both;}
+.imgFloat img{
+	float:left;
+}
+
+/********************
+フォントカラー
+********************/
+.fWhite {color:#FFFFFF;}
+.fRed {color: #cc0000;}
+.fBlack{color:#000000;}
+.fGray3{color:#333333;}
+.fLightBlue{ color:#199bc4}
+.fOrange{ color:orange;}
+.fBrown{ color:#47210D;}
+.txtc-blue  { color: #1370dc;}
+.txtc-red   { color: #cc0000;}
+.txt_small_price {
+	font-size: 0.9em;
+	line-height: 120%;
+	color: #b71414;
+}
+.txt_small_price_w {
+	font-size: 0.9em;
+	line-height: 120%;
+	color: #ffffff;
+}
+.txt_small_price_s {
+	font-size: 0.7em;
+	line-height: 120%;
+	color: #b71414;
+}
+
+/********************
+余白
+********************/
+.pad5{ padding:5px;
+	box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	behavior: url("boxsizing.htc");
+	}
+.pad10{ padding:10px;
+	box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	behavior: url("boxsizing.htc");
+	}
+.pad20{ padding:20px;
+	box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	behavior: url("boxsizing.htc");
+	}
+.pad40{ padding:40px;
+	box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	behavior: url("boxsizing.htc");
+	}
+
+
+/*******************
+影
+*******************/
+.shadow{
+	background:#ffffff;
+	box-shadow:2px 2px 2px rgba(0,0,0,0.2);
+	padding:10px;
+	margin-bottom:20px;
+}
+
+/*******************
+角丸
+*******************/
+
+.cornerBox{
+	max-width:100%;
+	margin-bottom:20px;
+	padding:10px;
+	overflow:hidden;
+	display:block;
+	border:solid 1px #cccccc;
+	-moz-border-radius:5px;
+	-webkit-border-radius:5px;
+	border-radius:5px;
+}
+
+.corner,
+.corner5,
+.demo{
+	        border-radius:5px;
+	   -moz-border-radius:5px;
+	-webkit-border-radius:5px;
+	behavior: url("border-radius.htc");
+}
+
+
+
+
+/********************
+段組
+********************/	
+
+/*2列*/
+.column2{
+	margin:0;
+	padding:0;
+}
+.column2 li{
+	float:left;
+	list-style:none;
+	width:49%;
+	height:auto;
+	margin-right:2%;
+}
+
+.column2 li:nth-child(2n){
+	margin-right:0;
+}
+
+
+.column2:after {
+  content: ".";  /* 新しい要素を作る */
+  display: block;  /* ブロックレベル要素に */
+  clear: both;
+  height: 0;
+  visibility: hidden;
+}
+
+/*3列*/
+.column3{
+margin-right: -1.33%;
+}
+.column3 li{
+	float:left;
+	list-style:none;
+	width: 32%;
+	margin-right: 1.33%; /* 32 + 1.33 = 33.33% = 3分の1 */
+	height:auto;
+}
+
+.column3 li:nth-child(3n){
+	margin-right:0;
+}
+
+
+.column3:after {
+  content: ".";  /* 新しい要素を作る */
+  display: block;  /* ブロックレベル要素に */
+  clear: both;
+  height: 0;
+  visibility: hidden;
+}
+
+
+
+/********************
+ボーダー
+********************/	
+.box_gray {
+	border: 1px solid #e5dac5;
+	background:#ffffff;
+}
+
+
+.BorderBox {border:1px solid #cccccc;}
+
+.BorderTop {border-top:1px solid #cccccc;}
+.BorderRight {border-right:1px solid #cccccc;}
+.BorderBtm {border-bottom:1px solid #cccccc;}
+.BorderLeft {border-left:1px solid #cccccc;}
+
+.BorderDotTop {border-top:1px dotted #ababab;}
+.BorderDotRight {border-right:1px dotted #ababab;}
+.BorderDotBtm {border-bottom:1px dotted #ababab;}
+.BorderDotLeft {border-left:1px dotted #ababab;}
+
+.BorderBtmWhite {border-bottom:1px solid #ffffff;}
+
+.DotLine {
+	background-image: url(/images/dot.gif);
+	background-repeat: repeat-x;
+	background-position: center;
+}
+
+/*******************
+背景画像繰り返し
+*******************/
+.repeatX{background-repeat: repeat-x;}
+.repeatY{background-repeat: repeat-y;}
+.repeatNo{background-repeat: no-repeat;}
+
+/*******************
+スペーサー
+*******************/
+.mrgnB1 {margin-bottom:1px;}
+.mrgnB3 {margin-bottom:3px;}
+.mrgnB5 {margin-bottom:5px;}
+.mrgnB10 {margin-bottom:10px;}
+.mrgnB15 {margin-bottom:15px;}
+.mrgnB20 {margin-bottom:20px;}
+.mrgnB25 {margin-bottom:25px;}
+.mrgnB30 {margin-bottom:30px;}
+.mrgnB40 {margin-bottom:40px;}
+.mrgnB50 {margin-bottom:50px;}
+.mrgnB60 {margin-bottom:60px;}
+.mrgnB70 {margin-bottom:70px;}
+
+.mrgnT10 {margin-top:10px;}
+.mrgnT20 {margin-top:20px;}
+.mrgnT30 {margin-top:30px;}
+
+/********************
+リスト●表示
+********************/
+.listGray li{
+    padding-left: 1em; 
+    text-indent: -.7em;
+}
+.listGray li:before {
+	display:inline-block;
+    content: "";
+		width:5px;
+		height:5px;
+		margin-right:5px;
+		margin-bottom:2px;
+		background:#999999;
+	        border-radius:50%;
+	   -moz-border-radius:50%;
+	-webkit-border-radius:50%;
+	behavior: url("border-radius.htc");
+}
+
+/********************
+リスト番号表示
+********************/
+.listNumber li{
+	list-style-type:decimal;
+	list-style-position:inside;
+    padding-left: 1.5em; 
+    text-indent: -1.2em;
+}
+
+
+/********************
+注釈（※）
+********************/
+
+.notes{
+	padding-left: 1em; 
+	text-indent: -.7em;
+}
+.notes:before {
+	display:inline-block;
+  content: "* ";
+}
+
+/********************
+フォーム
+********************/
+input[type="submit"] ,
+input[type="reset"] ,
+input[type="button"] {
+	font-family: "メイリオ", Meiryo, Osaka, "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", "ＭＳ Ｐゴシック";
+	padding:10px 5px;
+	margin-left:auto;
+	margin-right:auto;
+	min-width:80%;
+	font-weight:bold;
+	cursor:pointer;
+	        border-radius: 3px;
+       -moz-border-radius: 3px;
+	-webkit-border-radius: 3px;
+	behavior: url(border-radius.htc); /* IE */
+
+	-webkit-appearance: none;/*iphoneのデフォルトボタン打消*/
+	border:#b9b8b8 solid 1px;
+	background:-webkit-gradient(
+		linear, left top, left bottom, 
+		from(#dddddd),
+		to(#f7f7f7));
+	background:-webkit-linear-gradient(top, #f7f7f7 0% , #dddddd 100%);
+	background:-moz-linear-gradient   (top, #f7f7f7 0% , #dddddd 100%);
+	background:-o-linear-gradient     (top, #f7f7f7 0% , #dddddd 100%);
+	background:-ms-linear-gradient    (top, #f7f7f7 0% , #dddddd 100%);
+	background:linear-gradient        (top, #f7f7f7 0% , #dddddd 100%);
+	filter: progid:DXImageTransform.Microsoft.gradient(
+		GradientType=0,startColorstr='#FFf7f7f7', endColorstr='#FFdddddd');/*IE10用（色の頭にFFが必要）*/
+}
+
+input[type="submit"]:hover,
+input[type="reset"]:hover ,
+input[type="button"]:hover {
+	color:#aa1706;
+	background:#dddddd;
+}
+
+input[type="image"]:hover{
+    filter: alpha(opacity=70);
+    -moz-opacity:0.7;
+    opacity:0.7;
+}
+
+input[type="checkbox"],
+input[type="radio"]{
+	width:18px;
+	height:18px;
+	vertical-align:middle;
+	margin:6px;
+}
+
+input[type="image"]{
+	max-width:100%;
+	max-height:100%;
+	width:auto;
+	height:auto;
+}
+input[type="text"],
+input[type="tel"],
+input[type="password"]{
+	font-family: "メイリオ", Meiryo, Osaka, "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", "ＭＳ Ｐゴシック";
+    padding: 5px;
+    box-sizing: border-box;
+    border-radius: 3px;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    box-shadow: none;
+    width: 100%;
+    border: 1px solid #b9b8b8;
+}
+select{
+    /*display: block;*/
+	font-family: "メイリオ", Meiryo, Osaka, "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", "ＭＳ Ｐゴシック";
+	margin:0;
+    padding: 5px 25px 5px 10px;
+    box-sizing: border-box;
+	        border-radius:3px;
+	   -moz-border-radius:3px;
+	-webkit-border-radius:3px;
+behavior: url(border-radius.htc); /* IE */
+    line-height: 18px;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    box-shadow: none;
+    background: url(select_arrow.gif) right 50% no-repeat #fff;
+    background-size: 19px,100%;
+    width: auto;
+	min-width:60px;
+	max-width:100%;
+    height: 30px;
+    border: 1px solid #b9b8b8;
+}
+select::-ms-expand {
+  display: none;
+}
+textarea{
+	font-family: "メイリオ", Meiryo, Osaka, "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", "ＭＳ Ｐゴシック";
+	margin:0;
+    padding: 5px;
+    box-sizing: border-box;
+	        border-radius:3px;
+	   -moz-border-radius:3px;
+	-webkit-border-radius:3px;
+behavior: url(border-radius.htc); /* IE */
+    line-height: 18px;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    box-shadow: none;
+    width: 100%;
+    border: 1px solid #b9b8b8;
+}
+
+label{
+	/*white-space: nowrap;*/
+	padding-right:5px;
+}
+
+/*必須*/
+input.required,
+textarea.required{
+	background:#FFFFCC;
+}
+
+
+/*******************
+クリアフィックス
+*******************/
+
+.clearfix:after {
+  content: ".";  /* 新しい要素を作る */
+  display: block;  /* ブロックレベル要素に */
+  clear: both;
+  height: 0;
+  visibility: hidden;
+}
+
+.clearfix {
+  min-height: 1px;
+}
+
+* html .clearfix {
+  height: 1px;
+  /*\*//*/
+  height: auto;
+  overflow: hidden;
+  /**/
+}
+
