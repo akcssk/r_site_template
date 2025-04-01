@@ -1,0 +1,380 @@
+@charset "UTF-8";
+
+/*一覧*/
+
+.prodList{
+	margin-bottom:10px;
+}
+
+.prodList tr{
+	padding-bottom:10px;
+}
+
+
+.prodListBox{
+	width:49%;
+	border:#eeeeee solid 1px;
+	padding:5px;
+	background:#ffffff;
+	position:relative;
+	padding-bottom:25px;
+}
+
+.prodListBox a{
+	display:block;
+	color:#333333;
+}
+
+.prodListBox a:hover img{
+    filter: alpha(opacity=70);
+    -moz-opacity:0.7;
+    opacity:0.7;
+}
+.prodListBoxSpacer{
+	width:2%;
+}
+
+.prodListImg{
+	margin:0 auto 10px;
+}
+.prodListImg img{
+	margin:auto;
+}
+.prodListIco{
+	line-height:16px;
+	margin-bottom:10px;
+}
+.prodListIco img{
+	display:inline-block;
+}
+.prodListName{
+	color:#333333;
+	font-size:0.9em;
+	line-height:1.2em;
+	text-align:left;
+	margin-bottom:15px;
+	word-break:break-all;
+	overflow-wrap : break-word;
+}
+.prodList .prodListName{
+	font-weight:bold;
+}
+.prodListPrice{
+	position:absolute;
+	bottom:5px;
+	right:5px;
+	font-size:0.8em;
+	line-height:1.2em;
+	text-align:right;
+	color:#cc0000;
+	font-weight:bold;
+}
+.prodListPoint{
+	font-size:0.8em;
+	line-height:1.4em;
+height: 2.6em;
+overflow-wrap: break-word;/*強制折返*/
+overflow : hidden;
+text-overflow: ellipsis;
+display: -webkit-box;
+-webkit-box-orient: vertical;
+-webkit-line-clamp: 2;
+line-clamp: 2;
+margin-bottom:5px;
+
+}
+
+
+
+/********************
+ページ番号
+********************/
+
+ul.pager {
+      margin: 0 auto;
+      padding: 0;
+	}
+ul.pager li {
+	float: left;
+	margin-right: 5px;
+	font-weight: bold;
+	list-style: none;
+	}
+
+ul.pager li span{
+	display:block;
+	background:#ad073b;
+	border: 1px #ad073b solid;
+	color:#ffffff;
+	padding:0px 8px;
+	}
+ul.pager li a {
+	display:block;
+	background:#ffffff;
+	border: 1px #1370dc solid;
+	padding:0 8px;
+	color:#1370dc;
+	text-decoration:none;
+}
+ul.pager li a:hover,
+ul.pager li a:active {
+	background:#1370dc;
+	color:#ffffff;
+}
+
+
+/******************************
+カテゴリページ
+*/
+
+/*一覧中カテ*/
+.itemListCate{
+	font-size:0.8em;
+	line-height:1.2em;
+}
+.itemListCate td{
+	border:#cccccc solid 1px;
+	background:#f7f7f7;
+	text-align:center;
+	border-radius: 5px; 
+	-webkit-border-radius: 5px;   
+	-moz-border-radius: 5px;
+	behavior: url("border-radius.htc");
+	padding:3px;
+}
+.itemListCate td a{
+	display:block;
+}
+.itemListCate td:hover{
+	background:#f7f7f7;
+}
+
+
+
+.categoryImg{
+	text-align:center;
+	margin:10px 0;
+}
+
+.categoryImg img{
+	margin:auto;
+	border:#cccccc solid 1px;
+}
+.categoryImg span{
+	display:block;
+	font-size:0.8em;
+	line-height:1.5em;
+	margin-bottom:15px;
+}
+
+/*pager*/
+.hit{
+	border-bottom:#dddddd solid 1px;
+	font-size:0.9em;
+}
+
+/************************************************************
+商品詳細
+************************************************************/
+.itemDetail {
+	width:100%;
+	margin:auto;
+}
+.itemPhoto {
+	width:100%;
+}
+.itemPhoto img {
+	width:100%;
+	border-radius: 10px;        /* CSS3草案 */  
+	-webkit-border-radius: 10px;    /* Safari,Google Chrome用 */  
+	-moz-border-radius: 10px;   /* Firefox用 */
+}
+.itemDetail  p.price {
+	text-align:right;
+	color:#cc0000;
+	font-size:1.4em;
+	font-weight:bold;
+	margin-bottom:20px;
+}
+.itemDetail > div {
+	width:100%;
+}
+.itemDetail > div dt {
+	color:#ad073b;
+	font-weight:bold;
+	font-size:1.2em;
+}
+.itemDetail > div dd {
+	padding:0;
+	margin:0;
+	width:100%;
+}
+.itemDetail > div ul.comment li {
+	padding:15px;
+	font-size:0.9em;
+	font-weight:bold;
+	line-height:1em;
+}
+.itemDetail > div ul.comment li:nth-child(odd) {
+	background:#f7f7f7;
+}
+.btnDetail {
+	margin:0 auto 30px;
+	width:80%;
+}
+.btnDetail a {
+	display:block;
+	text-align:center;
+	border-radius: 10px;        /* CSS3草案 */  
+	-webkit-border-radius: 10px;    /* Safari,Google Chrome用 */  
+	-moz-border-radius: 10px;   /* Firefox用 */
+	padding:20px 0;
+	background:#ad073b;
+	color:#ffffff;
+	font-size:1.2em;
+	font-weight:bold;
+}
+
+
+/******************************
+商取
+*/
+.fee_table { border:#cccccc solid 1px;}
+.fee_table dl{width:100%; margin:0; padding:0; clear:both;}
+.fee_table dt{width:50%; float:left; text-align:center; margin:0; padding:5px;}
+.fee_table dd{width:50%; float:left; text-align:center; margin:0; padding:5px;}
+.fee_table dl:nth-child(odd){ background:#f7f7f7;}
+.fee_table dl:after {
+  content: ".";  /* 新しい要素を作る */
+  display: block;  /* ブロックレベル要素に */
+  clear: both;
+  height: 0;
+  visibility: hidden;
+}
+
+
+.prodDetailName{
+	width:100%;
+	padding:5px;
+	background:#f7f7f7;
+	border:#333333 solid 1px;
+	        border-radius:5px;
+	   -moz-border-radius:5px;
+	-webkit-border-radius:5px;
+	behavior: url("border-radius.htc");
+	font-weight:bold;
+	margin-bottom:5px;
+}
+
+/*テーブル*/
+table.prodInfo2{
+	border:#0127a1 solid 1px;
+	border-bottom:none;
+	margin-bottom:10px;
+}
+table.prodInfo2 tr{
+}
+table.prodInfo2 th,
+table.prodInfo2 td{
+	padding:10px;
+	border-bottom:#0127a1 solid 1px;
+	overflow-wrap: break-word;/*強制折返*/
+}
+table.prodInfo2 th{
+	border-right:1px solid #0127a1;
+	text-align:center;
+	background:#f7f7f7;
+	width:25%;
+	color:#0127a1;
+}
+
+/************************************************************
+ニュース関連
+************************************************************/
+.news {
+	width: 100%;
+	height:350px;
+	overflow-y:scroll;
+	}
+.news::-webkit-scrollbar{ width: 5px;}
+.news::-webkit-scrollbar-track{	background: #f7f7f7;}
+.news::-webkit-scrollbar-thumb {background: #dddddd;}
+.news li {
+	padding:15px 20px;
+	font-family:"游明朝 Light", YuMincho, "Noto Serif", "Sawarabi Mincho", "ヒラギノ明朝 Pro W3", "Hiragino Mincho Pro", HiraMinProN-W3, "ＭＳ Ｐ明朝", "MS PMincho", serif;
+	font-weight:bold;
+	border-bottom:1px dotted #cccccc;
+	line-height:1.3em;
+}
+.news li:nth-child(odd) {
+	background:#f7f7f7;
+}
+.news li a {
+	text-decoration:none;
+	color:#222222;
+}
+.news li span {
+	display:inline-block;
+	font-family: 游ゴシック体, 'Yu Gothic', YuGothic, 'ヒラギノ角ゴシック Pro', 'Hiragino Kaku Gothic Pro', メイリオ, Meiryo, Osaka, 'ＭＳ Ｐゴシック', 'MS PGothic', sans-serif;
+	font-weight:500;
+	font-size:0.9em;
+	padding:5px;
+	margin:0 0 5px 10px;
+	text-align:center;
+	background:#5d0009;
+	color:#960;
+	border-radius: 20px;        /* CSS3草案 */  
+	-webkit-border-radius: 20px;    /* Safari,Google Chrome用 */  
+	-moz-border-radius: 20px;   /* Firefox用 */
+	width:130px;
+	line-height:1em;
+}
+.news li span.shop {/* お知らせ */
+	background:#f4d7d9;
+}
+
+/***
+2階層目以降への指定
+************************************************************************************************************************/
+.secondContents > h3 {
+	background:url(../images/common/h2Bg.png) left top no-repeat #6e001a;
+	padding:20px 0;
+	margin-bottom:20px;
+	text-align:center;
+	line-height:1em;
+	font-size:1.2em;
+	color:#ffffff;
+}
+
+/************************************************************
+店舗案内
+************************************************************/
+.shop {
+	margin-bottom:20px;
+}
+.shop p {
+	width:90%;
+	margin:0 auto 20px;
+}
+.shop p img {
+	width:100%;
+}
+.shop iframe {
+	margin-top:20px;
+}
+p.shopIco {
+	width:100%;
+	margin:0;
+}
+.shopIco span {
+	display:inline-block;
+	width:20%;
+	line-height:1.3em;
+	padding:5px 0;
+	margin:0 5px 5px 0;
+	font-size:0.75em;
+	text-align:center;
+	background:#222222;
+	color:#ffffff;
+}
+

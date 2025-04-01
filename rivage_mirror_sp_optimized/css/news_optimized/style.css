@@ -1,0 +1,340 @@
+@charset "UTF-8";
+
+
+/*********************************************************
+ 共通
+*/
+section{
+	max-width:620px;
+	width:96%;
+	margin:0 auto 0;
+	display:block;
+	clear:both;
+	float:none;
+}
+/*リンクL*/
+/*リンクS*/
+
+/**************
+PC・SP切替
+***************/
+
+/*********************************************************
+ ヘッダー
+*/
+.firstSection2nd{
+	background:url(/images_sp/mainImg2nd.jpg) center top no-repeat;
+	background-size:cover;
+	position:relative;
+	height:300px;
+}
+
+.firstSection2nd h1 {
+	position:absolute;
+	top:5px;
+	left:5px;
+	font-size:0.5em;
+	color:#ffffff;
+}
+
+.firstSection2nd p.logo {
+	position:absolute;
+	top:20px;
+	left:20px;
+	width:230px;
+	height:auto;
+}
+
+.firstSection2nd p.message {
+	text-align:center;
+	width:90%;
+	color:#ffffff;
+	font-family:"游明朝 Light", YuMincho, "Noto Serif", "Sawarabi Mincho", "ヒラギノ明朝 Pro W3", "Hiragino Mincho Pro", HiraMinProN-W3, "ＭＳ Ｐ明朝", "MS PMincho", serif;
+	font-weight:bold;
+	font-size:1.3em;
+	line-height:1.3em;
+	position:absolute;
+	top:55%;
+	left:50%;
+	transform:translate(-50%,-50%);
+	-webkit-transform:translate(-50%,-50%);
+	-ms-transform:translate(-50%,-50%);
+	text-shadow: 0px 1px 3px rgba(0,0,0,0.3);
+}
+
+/*********************************************************
+ フッター
+*/
+footer{
+	width:100%;
+	max-width:640px;
+	margin:0 auto;
+}
+.copyright{
+	background:#000000;
+	color:#ffffff;
+	font-size:0.6em;
+	text-align:center;
+	padding:10px;
+}
+
+
+/*Calendar*/
+
+/*SNS*/
+
+/*********************************************************
+ パンくず
+*/
+/*商品詳細*/
+
+/************************************************************
+トップページ
+************************************************************/
+/*重要なお知らせ（盆・年末年始等）トップページの一番上に表示）*/
+/*********************************************************
+トップページ カテゴリリンク
+*/
+/*ニュース*/
+.news {
+	width: 100%;
+	padding: 0px;
+	color:#333333;
+	font-size:0.9em;
+}
+.news a{
+	text-decoration:underline;
+}
+.news a:hover{
+}
+
+/*おすすめ商品・ランキング・一覧*/
+
+
+/***
+indexのみの指定
+************************************************************************************************************************/
+/************************************************************
+4つの〇メニュー
+************************************************************/
+
+
+/************************************************************
+店舗案内
+************************************************************/
+
+
+/************************************************************
+中バナー2
+************************************************************/
+
+
+/************************************************************
+ニュース関連
+************************************************************/
+.news {
+	width: 100%;
+	height:350px;
+	overflow-y:scroll;
+	}
+.news::-webkit-scrollbar{ width: 5px;}
+.news::-webkit-scrollbar-track{	background: #f7f7f7;}
+.news::-webkit-scrollbar-thumb {background: #dddddd;}
+.news li {
+	padding:15px 20px;
+	font-family:"游明朝 Light", YuMincho, "Noto Serif", "Sawarabi Mincho", "ヒラギノ明朝 Pro W3", "Hiragino Mincho Pro", HiraMinProN-W3, "ＭＳ Ｐ明朝", "MS PMincho", serif;
+	font-weight:bold;
+	border-bottom:1px dotted #cccccc;
+	line-height:1.3em;
+}
+.news li:nth-child(odd) {
+	background:#f7f7f7;
+}
+.news li a {
+	text-decoration:none;
+	color:#222222;
+}
+.news li span {
+	display:inline-block;
+	font-family: 游ゴシック体, 'Yu Gothic', YuGothic, 'ヒラギノ角ゴシック Pro', 'Hiragino Kaku Gothic Pro', メイリオ, Meiryo, Osaka, 'ＭＳ Ｐゴシック', 'MS PGothic', sans-serif;
+	font-weight:500;
+	font-size:0.9em;
+	padding:5px;
+	margin:0 0 5px 10px;
+	text-align:center;
+	background:#5d0009;
+	color:#960;
+	border-radius: 20px;        /* CSS3草案 */  
+	-webkit-border-radius: 20px;    /* Safari,Google Chrome用 */  
+	-moz-border-radius: 20px;   /* Firefox用 */
+	width:130px;
+	line-height:1em;
+}
+.news li span.shop {/* お知らせ */
+	background:#f4d7d9;
+}
+
+/*ニュース詳細ページ*/
+
+/************************************************************
+求人バナー
+************************************************************/
+
+/************************************************************
+instagram
+************************************************************/
+.instagram {
+	padding:30px 0 30px;
+}
+.instagram p {
+	margin:0 auto 25px;
+}
+.instagram p img {
+	margin:auto;
+	width:170px;
+}
+.instagram {
+  min-height: 1px;
+}
+.instagram:after {
+  content: ".";  /* 新しい要素を作る */
+  display: block;  /* ブロックレベル要素に */
+  clear: both;
+  height: 0;
+  visibility: hidden;
+}
+* html .instagram {
+  height: 1px;
+  /*\*//*/
+  height: auto;
+  overflow: hidden;
+  /**/
+}
+.instagram li {
+	float:left;
+	width:33.33%;
+}
+
+
+
+/***
+2階層目以降への指定
+************************************************************************************************************************/
+
+/************************************************************
+店舗案内
+************************************************************/
+.shop {
+	margin-bottom:20px;
+}
+.shop p {
+	width:90%;
+	margin:0 auto 20px;
+}
+.shop p img {
+	width:100%;
+}
+
+/************************************************************
+求人情報
+************************************************************/
+
+/************************************************************
+お問合せフォーム
+************************************************************/
+
+/************************************************************
+商品詳細
+************************************************************/
+
+/************************************************************
+カフェメニュー
+************************************************************/
+
+
+
+
+
+/*******************************************
+レスポンシブ
+*/
+@media only screen and (max-width:480px) {
+}
+@media only screen and (max-width:380px) {
+}
+
+/******************************
+ご注文方法
+*/
+
+
+/******************************
+カテゴリページ
+*/
+
+/*一覧中カテ*/
+
+
+/*大カテ*/
+
+
+/*小カテ*/
+
+
+/*中カテ*/
+
+.categoryImg{
+	text-align:center;
+	margin:10px 0;
+}
+
+.categoryImg img{
+	margin:auto;
+	border:#cccccc solid 1px;
+}
+.categoryImg span{
+	display:block;
+	font-size:0.8em;
+	line-height:1.5em;
+	margin-bottom:15px;
+}
+
+/*pager*/
+
+
+/******************************
+ショッピングカート
+*/
+
+/************************************************************
+商品詳細
+************************************************************/
+
+/******************************
+商取
+*/
+
+
+/******************************
+商品詳細
+*/
+
+/*詳細ページ商品写真slick*/
+
+/*カートまわり*/
+
+/*他の興味*/
+
+/*テーブル*/
+/**/
+
+
+
+/**/
+/*cart*/
+/************************************************************
+石の種類から選ぶ
+************************************************************/
+/************************************************************
+マイページ
+************************************************************/

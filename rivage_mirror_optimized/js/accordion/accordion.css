@@ -1,0 +1,33 @@
+@charset "shift_jis"; 
+
+/********************
+アコーディオン　開閉式
+********************/
+.accordion{
+	margin-bottom:5px;
+}
+.accordionTitle{
+	font-weight:bold;
+	cursor:pointer;
+	background:#f7f7f7;
+	padding:5px;
+	text-align:right;
+	margin-bottom:10px;
+}
+.accordionTitle span{
+	float:right;
+	margin-left:5px;
+}
+.accordionTitle:after{
+  content: ".";  /* 新しい要素を作る */
+  display: block;  /* ブロックレベル要素に */
+  clear: both;
+  height: 0;
+  visibility: hidden;
+}
+.accordionBtn{
+}
+.accordionDetail {
+	display:none;
+}
+

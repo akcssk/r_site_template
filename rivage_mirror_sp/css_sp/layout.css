@@ -71,3 +71,34 @@ footer{
 	text-align:center;
 	padding:10px;
 }
+
+/*********************************************************
+ パンくず
+*/
+
+.pan{
+	width:100%;
+	margin:10px 0;
+	font-size:0.8em;
+	line-height:1.2em;
+	font-weight:bold;
+}
+.pan span{
+	display:inline-block;
+	vertical-align:middle;
+	width:20px;
+	height:20px;
+	background:url(../images/left/left_arr_right.gif) center 46% no-repeat;
+	margin-right:5px;
+}
+.pan img{
+	display:none;/*アイコン非表示*/
+	max-width:20px;
+	height:auto;
+}
+/*商品詳細*/
+.pan p{
+}
+.pan a{
+	color:333333;
+}

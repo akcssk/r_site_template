@@ -25,21 +25,30 @@ section{
 	display:table;
 	background-color:#6e001a !important;
 }
-.boxBackstretch h1 {
+.firstSection2nd{
+	background:url(/images_sp/mainImg2nd.jpg) center top no-repeat;
+	background-size:cover;
+	position:relative;
+	height:300px;
+}
+.boxBackstretch h1,
+.firstSection2nd h1 {
 	position:absolute;
 	top:5px;
 	left:5px;
 	font-size:0.5em;
 	color:#ffffff;
 }
-.boxBackstretch p.logo {
+.boxBackstretch p.logo,
+.firstSection2nd p.logo {
 	position:absolute;
 	top:20px;
 	left:20px;
 	width:230px;
 	height:auto;
 }
-.boxBackstretch p.message {
+.boxBackstretch p.message,
+.firstSection2nd p.message {
 	text-align:center;
 	width:90%;
 	color:#ffffff;
@@ -55,7 +64,6 @@ section{
 	-ms-transform:translate(-50%,-50%);
 	text-shadow: 0px 1px 3px rgba(0,0,0,0.3);
 }
-
 /*********************************************************
  フッター
 */
@@ -70,4 +78,35 @@ footer{
 	font-size:0.6em;
 	text-align:center;
 	padding:10px;
+}
+
+/*********************************************************
+ パンくず
+*/
+
+.pan{
+	width:100%;
+	margin:10px 0;
+	font-size:0.8em;
+	line-height:1.2em;
+	font-weight:bold;
+}
+.pan span{
+	display:inline-block;
+	vertical-align:middle;
+	width:20px;
+	height:20px;
+	background:url(/images/left/left_arr_right.gif) center 46% no-repeat;
+	margin-right:5px;
+}
+.pan img{
+	display:none;/*アイコン非表示*/
+	max-width:20px;
+	height:auto;
+}
+/*商品詳細*/
+.pan p{
+}
+.pan a{
+	color:333333;
 }
