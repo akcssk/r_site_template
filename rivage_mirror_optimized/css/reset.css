@@ -1,90 +1,40 @@
-@charset "shift_jis";
-html, body, h1, h2, h3, h4, h5, h6, ul, ol, dl, li, dt, dd, p, div, span, img, a {
+@charset "UTF-8";
+
+/* 基本リセット */
+html, body, h1, h2, ul, li, p, div, span, img, a {
   margin: 0;
   padding: 0;
   border: 0;
   font-size: 100%;
-  vertical-align:baseline;
-  -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
+  vertical-align: baseline;
   box-sizing: border-box;
 }
 
-*{
--webkit-box-sizing: border-box;
-   -moz-box-sizing: border-box;
-     -o-box-sizing: border-box;
-    -ms-box-sizing: border-box;
-        box-sizing: border-box;
-	behavior: url("boxsizing.htc");
+/* 全要素に継承 */
+*, *:before, *:after {
+  box-sizing: inherit;
 }
 
-hr{
-	height: 0;
-	margin: 0;
-	padding: 0;
-	border: 0;}
-	
-article, header, footer, aside, figure, figcaption, nav, section { 
-  display:block;
-	}
-	
-body {
-  -ms-text-size-adjust: 100%;
-  -webkit-text-size-adjust: 100%;
+/* HTML5要素（現在のブラウザでは必須ではないが、念のため） */
+ header, footer, nav { 
+  display: block;
 }
 
-img{ 
-	border: none;
-	max-width:100%;/*width:100%;???????????X*/
-	width:auto;
-	height:auto;
-	/*display:block;??????????????*/
-	-ms-interpolation-mode: bicubic;/*IE???k???W???M?[???*/
+/* 画像関連 */
+img {
+  border: none;
+  max-width: 100%;
+  width: auto;
+  height: auto;
 }
 
-
-
+/* リンク内画像のホバー効果 */
 a:hover img,
-a:active img{
-	opacity:0.7;
-	filter: alpha(opacity=70);        /* ie lt 8 */
-	-ms-filter: "alpha(opacity=70)";  /* ie 8 */
-	-moz-opacity:0.7;                 /* FF lt 1.5, Netscape */
-	-khtml-opacity: 0.7;              /* Safari 1.x */
-}
-input[type="image"]:hover{
-	opacity:0.7;
-	filter: alpha(opacity=70);        /* ie lt 8 */
-	-ms-filter: "alpha(opacity=70)";  /* ie 8 */
-	-moz-opacity:0.7;                 /* FF lt 1.5, Netscape */
-	-khtml-opacity: 0.7;              /* Safari 1.x */
+a:active img {
+  opacity: 0.7;
 }
 
-a[name]{
-	display:block;
-	margin-top:-10px;
-	padding-top:10px;
-}
-
-ol, ul {
+/* リストのスタイルリセット */
+ ul {
   list-style: none;
-  list-style-type: none;
-}
-
-*,:before,:after {
-box-sizing:inherit;
-}
-
-:focus {outline: 0;}
-
-/*//////////////////////////////////////// cf */
-.clearfix:after {
-    content:" ";
-    display:block;
-    clear:both;
-}
-
-script + img{
-	display:none;
 }

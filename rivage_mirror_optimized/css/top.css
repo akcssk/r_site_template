@@ -1,0 +1,535 @@
+@charset "UTF-8";
+
+/************************************************************
+メインイメージ
+************************************************************/
+@media screen and (min-width: 1200px) {
+  .headerArea {
+    width:100%;
+    padding-top:0.5651%;/*画像サイズが900×310（310÷900）*/
+    background-size:cover;
+    padding:20px 0;
+    width:100%;
+    height:1085px;
+    position:relative;
+    display:table;
+  }
+}
+@media screen and (max-width: 1199px) {
+  .headerArea{
+    background:url(/images_sp/mainImg1.jpg) center bottom no-repeat;
+    width:100%;
+    height:500px;
+    padding-top:1.4453%;/*画像サイズが900×310（310÷900）*/
+    background-size:cover;
+    padding:20px 0;
+    display:table;
+    background-color:#6e001a !important;
+  }
+}
+/************************************************************
+ 4つの〇メニュー（レスポンシブ）
+************************************************************/
+.tWorks {
+	padding: 15px 0;
+}
+
+/* ULのスタイル：幅は90%、中央寄せ、グリッドレイアウトで2列（スマホ） */
+.tWorks ul.column {
+	width: 90%;
+	margin: 0 auto;
+	list-style: none;
+	padding: 0;
+	display: grid;
+	grid-gap: 20px;
+	grid-template-columns: repeat(2, 1fr);
+}
+
+/* 画面幅1200px以上では4列表示 */
+@media screen and (min-width: 1200px) {
+	.tWorks ul.column {
+		grid-template-columns: repeat(4, 1fr);
+	}
+}
+
+/* 各リスト内のdlはブロック要素として整列 */
+.tWorks li dl {
+	margin: 0;
+}
+
+/* dt内の画像は中央寄せ＆レスポンシブ */
+.tWorks li dt {
+	text-align: center;
+}
+
+.tWorks li dt img {
+	display: block;
+	margin: 0 auto;
+	max-width: 100%;
+	height: auto;
+}
+
+/* dd内のテキスト */
+.tWorks li dd p {
+	text-align: center;
+	font-family: "游明朝 Light", YuMincho, "Noto Serif", "Sawarabi Mincho", "ヒラギノ明朝 Pro W3", "Hiragino Mincho Pro", HiraMinProN-W3, "ＭＳ Ｐ明朝", "MS PMincho", serif;
+	color: #ad073b;
+	font-weight: bold;
+	font-size: 1.2em;
+	margin: 20px 0 10px;
+}
+
+/* dd全体 */
+.tWorks li dd {
+	font-size: 0.9em;
+	width: 90%;
+	margin: 0 auto;
+	text-align: center;
+}
+
+/* リンク */
+.tWorks li a {
+	display: block;
+	text-decoration: none;
+	color: #222222;
+}
+
+/* clearfix用（必要なら） */
+.clearfix::after {
+	content: "";
+	display: table;
+	clear: both;
+}
+
+
+
+/************************************************************
+ 店舗案内（レスポンシブ：PC 3列、スマホ1列、背景全幅）
+************************************************************/
+.tShopinfo {
+	/* 背景画像を画面全幅に */
+	width: 100vw;
+	margin-left: calc(50% - 50vw);
+	background: url(/images/index/guide_bg.gif) center top repeat;
+	padding: 0 0 40px;
+	font-family: "游明朝 Light", YuMincho, "Noto Serif", "Sawarabi Mincho",
+		"ヒラギノ明朝 Pro W3", "Hiragino Mincho Pro", HiraMinProN-W3,
+		"ＭＳ Ｐ明朝", "MS PMincho", serif;
+}
+
+.tShopinfo h2 {
+	font-size: 2.3em;
+	line-height: 1em;
+	color: #ffffff;
+	text-align: center;
+	font-weight: normal;
+	border: none;
+	margin: 0;
+	padding: 20px 0;
+}
+
+.tShopinfo h2 span {
+	display: block;
+	font-size: 0.6em;
+}
+
+/* ULをグリッドレイアウトで制御 */
+.tShopinfo ul {
+	width: 90%;
+	margin: 0 auto;
+	padding: 0;
+	list-style: none;
+	display: grid;
+	grid-gap: 15px;
+	/* デフォルトは1列（スマホ） */
+	grid-template-columns: 1fr;
+	justify-items: center;
+}
+
+/* 画面幅1200px以上なら3列 */
+@media screen and (min-width: 1200px) {
+	.tShopinfo ul {
+		grid-template-columns: repeat(3, 1fr);
+	}
+}
+
+/* 各店舗情報ブロック */
+.tShopinfo ul li {
+	width: 100%;
+	max-width: 330px;
+	/* 固定サイズに近い印象が欲しい場合 */
+	position: relative;
+	overflow: hidden;
+}
+
+/* 店舗名（span）の位置：中央に重ねる */
+.tShopinfo ul li span {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	width: 50%;
+	text-align: center;
+	color: #ffffff;
+	background: rgba(0, 0, 0, 0.7);
+	padding: 10px;
+	z-index: 99;
+	transition: background 0.3s;
+}
+
+.tShopinfo ul li span:hover {
+	background: #5d0009;
+}
+
+/* リンク全体 */
+.tShopinfo ul li a {
+	display: block;
+	text-decoration: none;
+}
+
+/* 画像：レスポンシブに表示し、ホバーで拡大 */
+.tShopinfo ul li img {
+	display: block;
+	max-width: 100%;
+	height: auto;
+	transition: transform 0.3s ease-in-out;
+}
+
+.tShopinfo ul li img:hover {
+	transform: scale(1.1);
+}
+
+/* clearfix（必要なら） */
+.clearfix::after {
+	content: "";
+	display: table;
+	clear: both;
+}
+
+
+/************************************************************
+ 中バナー2（PC:2列、スマホ:1列）
+************************************************************/
+.banner2M {
+	padding: 20px 0;
+	border-bottom: 1px solid #dddddd;
+}
+
+.banner2M ul {
+	list-style: none;
+	margin: 0 auto;
+	padding: 0;
+	display: grid;
+	grid-gap: 15px;
+	grid-template-columns: 1fr;
+	/* スマホ：1列 */
+	justify-items: center;
+	/* 各アイテムを中央揃え */
+}
+
+
+/* PC（1200px以上）では2列表示 */
+@media screen and (min-width: 1200px) {
+	.banner2M ul {
+		grid-template-columns: repeat(2, 1fr);
+	}
+}
+
+.banner2M li a {
+	display: block;
+}
+
+.banner2M li img {
+	display: block;
+	max-width: 100%;
+	height: auto;
+}
+
+
+/************************************************************
+ ニュース関連（共通スタイル）
+************************************************************/
+
+/* 全体のコンテナ */
+.topNews {
+	padding: 0;
+}
+
+/* 見出し */
+.topNews h2 {
+	font-family: "游明朝 Light", YuMincho, "Noto Serif", "Sawarabi Mincho",
+		"ヒラギノ明朝 Pro W3", "Hiragino Mincho Pro", HiraMinProN-W3,
+		"ＭＳ Ｐ明朝", "MS PMincho", serif;
+	font-size: 2.3em;
+	line-height: 1em;
+	color: #ad073b;
+	text-align: center;
+	font-weight: normal;
+	border: none;
+	margin: 0;
+	padding: 20px 0;
+}
+
+.topNews h2 span {
+	display: block;
+	font-size: 0.6em;
+	color: #222222;
+}
+
+/* ニュースリスト */
+.news {
+	width: 100%;
+	height: 350px;
+	overflow-y: scroll;
+}
+
+/* スクロールバーのスタイル */
+.news::-webkit-scrollbar {
+	width: 5px;
+}
+
+.news::-webkit-scrollbar-track {
+	background: #f7f7f7;
+}
+
+.news::-webkit-scrollbar-thumb {
+	background: #dddddd;
+}
+
+/* 各ニュース項目 */
+.news li {
+	padding: 15px 20px;
+	font-family: "游明朝 Light", YuMincho, "Noto Serif", "Sawarabi Mincho",
+		"ヒラギノ明朝 Pro W3", "Hiragino Mincho Pro", HiraMinProN-W3,
+		"ＭＳ Ｐ明朝", "MS PMincho", serif;
+	font-weight: bold;
+	border-bottom: 1px dotted #cccccc;
+	line-height: 1.3em;
+}
+
+.news li:nth-child(odd) {
+	background: #f7f7f7;
+}
+
+.news li a {
+	text-decoration: none;
+	color: #222222;
+}
+
+/* ニュース内のspan（ラベル） */
+.news li span {
+	display: inline-block;
+	font-family: 游ゴシック体, 'Yu Gothic', YuGothic,
+		'ヒラギノ角ゴシック Pro', 'Hiragino Kaku Gothic Pro',
+		メイリオ, Meiryo, Osaka, 'ＭＳ Ｐゴシック', 'MS PGothic', sans-serif;
+	font-weight: 500;
+	font-size: 0.9em;
+	padding: 5px;
+	margin: 0 0 5px 10px;
+	text-align: center;
+	background: #5d0009;
+	color: #960;
+	border-radius: 20px;
+	-webkit-border-radius: 20px;
+	-moz-border-radius: 20px;
+	width: 130px;
+	line-height: 1em;
+}
+
+/* 特定のラベル（お知らせ） */
+.news li span.info {
+	background: #f4d7d9;
+}
+
+
+/* PC版：画面幅1200px以上ではそのままインラインブロック */
+@media screen and (min-width: 1200px) {
+	.news li {
+		padding: 20px 20px;
+		font-size: 1.1em;
+	}
+
+	.news li span.info {
+		display: inline-block;
+		line-height: 1.6em;
+		margin: 0 20px;
+	}
+}
+
+
+/************************************************************
+ 求人バナー（共通：SPベース）
+************************************************************/
+.recruitBn {
+	background: #f4d7d9;
+	padding: 15px;
+	margin-top: 30px;
+	text-align: center;
+	color: #ffffff;
+	text-shadow: 0px 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.recruitBn div {
+	border: 2px solid #fbe5e6;
+	padding: 50px 0;
+}
+
+.recruitBnLeadCopy {
+	font-family: "游明朝 Light", YuMincho, "Noto Serif", "Sawarabi Mincho",
+		"ヒラギノ明朝 Pro W3", "Hiragino Mincho Pro", HiraMinProN-W3,
+		"ＭＳ Ｐ明朝", "MS PMincho", serif;
+	font-size: 1.6em;
+	line-height: 1em;
+	margin-bottom: 15px;
+	font-weight: bold;
+	color: #ad073b;
+}
+
+.recruitTxt {
+	margin-bottom: 15px;
+	font-size: 1em;
+	line-height: 1.3em;
+	color: #960;
+}
+
+.recruitLink {
+	display: block;
+	font-family: "游明朝 Light", YuMincho, "Noto Serif", "Sawarabi Mincho",
+		"ヒラギノ明朝 Pro W3", "Hiragino Mincho Pro", HiraMinProN-W3,
+		"ＭＳ Ｐ明朝", "MS PMincho", serif;
+	padding: 7px;
+	border: 1px solid #ad073b;
+	width: 50%;
+	margin: auto;
+	color: #ad073b;
+	font-weight: bold;
+}
+
+.recruitLink:hover {
+	background: #ad073b;
+	color: #ffffff;
+}
+
+/************************************************************
+   PC用（画面幅1200px以上）：求人バナー上書き
+  ************************************************************/
+@media screen and (min-width: 1200px) {
+	.recruitBn {
+		width: 100vw;
+		margin-left: calc(50% - 50vw);
+		margin-right: calc(50% - 50vw);
+	}
+
+	.recruitBnLeadCopy {
+		font-size: 3.5em;
+		margin-bottom: 30px;
+	}
+
+	.recruitBn {
+		width: 100vw;
+		margin-left: calc(50% - 50vw);
+		margin-right: calc(50% - 50vw);
+
+		.recruitTxt {
+			margin-bottom: 30px;
+			line-height: 1.6em;
+			font-weight: bold;
+			color: #960;
+			text-shadow: none;
+		}
+
+		.recruitLink {
+			padding: 15px 30px;
+			width: 200px;
+		}
+	}
+}
+
+
+/************************************************************
+instagram
+************************************************************/
+@media screen and (max-width: 1199px) {
+  .instagram {
+		padding: 30px 0 30px;
+	}
+
+	.instagram p {
+		margin: 0 auto 25px;
+	}
+
+	.instagram p img {
+		margin: auto;
+		width: 170px;
+	}
+
+	.instagram {
+		min-height: 1px;
+	}
+
+	.instagram:after {
+		content: ".";
+		/* 新しい要素を作る */
+		display: block;
+		/* ブロックレベル要素に */
+		clear: both;
+		height: 0;
+		visibility: hidden;
+	}
+
+	* html .instagram {
+		height: 1px;
+	}
+
+	.instagram li {
+		float: left;
+		width: 33.33%;
+	}
+
+	.instaWrap {
+		position: relative;
+		width: 100%;
+		height: 100%;
+		padding-top: 50%;
+		overflow: hidden;
+	}
+
+	.instaWrap iframe {
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 375px;
+		border: none;
+	}
+}
+/************************************************************
+instagram(PC版)
+************************************************************/
+
+	@media screen and (min-width: 1200px) {
+
+		.instagram {
+			padding: 60px 0 0;
+		}
+
+		.instagram p {
+			margin: 0 0 60px 0;
+			text-align: center;
+		}
+		.instaWrap {
+			position:relative;
+			width:100%;
+			height:100%;
+			padding-top:20%;
+				overflow:hidden;
+		}
+		.instaWrap iframe{
+			position:absolute;
+			top:0;
+			left:0;
+			width:100%;
+			height:384px;
+				border:none;
+		}
+	}

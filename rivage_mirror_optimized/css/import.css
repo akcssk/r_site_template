@@ -1,9 +1,5 @@
-@charset "shift_jis"; 
-
+@charset "UTF-8";
 @import url("reset.css");
 @import url("common.css");
-@import url("style.css");
+@import url("layout.css");
 @import url("pager.css");
-@import url("../js/slick/slick.css");
-@import url("../js/slick/slick-theme.css");
-@import url("../js/magnific-popup/magnific-popup.css");

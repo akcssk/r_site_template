@@ -223,10 +223,62 @@
 <!-- #EndLibraryItem --><!-- page-top ------------------------------------------------------------------->
 <p id="page-top"><a href="#top">PAGE<br>TOP</a></p>
 </div><!-- / .wrapper -->
+<!-- jquery -->
+<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+<!--//////////slick//////////-->
+<script type="text/javascript" src="/js/slick/slick.js" charset="utf-8"></script>
+<script type="text/javascript" src="/js/slick/slick-df.js" charset="utf-8"></script>
+<!-- magnific-popup -->
+<script type="text/javascript" src="/js/magnific-popup/jquery.magnific-popup.min.js"></script>
+<script type="text/javascript" src="/js/magnific-popup/magnific-popup.js"></script>
+<!-- JS -->
+<script type="text/javascript" src="/js/smoothscroll.js"></script>
+<script type="text/javascript" src="/js/smoothRollOver.js"></script>
+<script type="text/javascript" src="/js/pagetop.js"></script>
+
+<script type="text/javascript" src="/js/accordion/accordion.js"></script>
+<script>
+$(function() {
+});
+</script>
+
+<!-- bxSlider = スライダー -->
+<script type="text/javascript" src="/js/bxSlider/bxSlider.js"></script>
+<script type="text/javascript" src="/js/bxSlider/bxSlider_custom.js"></script>
 
 
+<script type="text/javascript" src="/js/bgswitcher/jquery.backstretch.js"></script>
+<SCRIPT Language="JavaScript">
+<!--
+$(document).ready(function(){
+	$('.boxBackstretch').backstretch([
+		"/images/mainImg/mainImg1.jpg",
+		"/images/mainImg/mainImg2.jpg",
+	],{
+		fade: 1000,
+		duration: 4000	
+	});
+});
+// -->
+</SCRIPT>
 
 
-
+<script src="js/instafeed.js"></script>
+<script>
+  $(document).ready(function() {
+			var feed = new Instafeed({
+			target: 'instafeed',
+			get: 'user',
+			userId: '21421224480',//★
+			accessToken:'21421224480.a03668c.00a9c0efc9604bc588a7362bf0962dfe',//★
+			clientId: 'a03668caff58400785970affd79627d5',//★
+			links: true , 
+			limit: 5,//表示枚数
+			resolution: 'standard_resolution', 
+			template: '<li><a href="{{link}}" target="_blank"><img src="{{image}}"><div><span><img src="/js/insta_like.png" />{{likes}}<img src="/js/insta_comment.png"/>{{comments}}</span></div></a></li>'
+		});
+			feed.run();
+		});
+</script>
 </body>
 </html>
