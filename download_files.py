@@ -1,122 +1,125 @@
+#!/usr/bin/env python3
+import argparse
 import requests
 from bs4 import BeautifulSoup
 import os
 import urllib.parse
+from uuid import uuid4
 
 def download_images_from_page(url, download_dir='downloaded_images'):
     """
-    指定されたウェブページから画像ファイルをダウンロードします。
-    
-    Args:
-        url (str): 画像をダウンロードするウェブページのURL
-        download_dir (str): ダウンロードした画像を保存するディレクトリ
+    指定されたウェブページから画像ファイルをダウンロードし、
+    URL のパス構造をローカルに再現します。
     """
-    # ダウンロードディレクトリが存在しない場合は作成
-    if not os.path.exists(download_dir):
-        os.makedirs(download_dir)
-    
-    # ウェブページを取得
+    # ダウンロード先ルートフォルダを作成
+    os.makedirs(download_dir, exist_ok=True)
+
+    headers = {
+        'User-Agent': (
+            'Mozilla/5.0 (Windows NT 10.0; Win64; x64) '
+            'AppleWebKit/537.36 (KHTML, like Gecko) '
+            'Chrome/91.0.4472.124 Safari/537.36'
+        )
+    }
+
+    # ページ取得
     try:
-        headers = {
-            'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36'
-        }
         response = requests.get(url, headers=headers)
-        response.raise_for_status()  # エラーがあれば例外を発生させる
-    except requests.exceptions.RequestException as e:
-        print(f"ウェブページの取得に失敗しました: {e}")
+        response.raise_for_status()
+    except requests.RequestException as e:
+        print(f"ページ取得失敗: {e}")
         return
-    
-    # BeautifulSoupでHTMLを解析
+
     soup = BeautifulSoup(response.text, 'html.parser')
-    
-    # すべての画像タグを探す
     images = soup.find_all('img')
-    
-    # ベースURLを取得（相対パスを絶対パスに変換するため）
-    base_url = url
-    
-    # ダウンロードカウンター
     download_count = 0
-    
+
     print(f"{url} から画像をダウンロードしています...")
-    
-    # 各画像をチェック
+
     for img in images:
-        src = img.get('src')
-        
-        # srcがない場合、data-srcやdata-original-srcなどの属性をチェック（遅延読み込み対応）
-        if not src:
-            for attr in ['data-src', 'data-original', 'data-original-src', 'data-lazy-src']:
-                src = img.get(attr)
-                if src:
-                    break
-        
-        # 画像URLがない場合はスキップ
+        # src または遅延読み込み属性を取得
+        src = (
+            img.get('src') or
+            img.get('data-src') or
+            img.get('data-original') or
+            img.get('data-lazy-src')
+        )
         if not src:
             continue
-        
-        # URLが相対パスの場合、絶対URLに変換
-        img_url = urllib.parse.urljoin(base_url, src)
-        
-        # ファイル名を取得
-        file_name = os.path.basename(urllib.parse.urlparse(img_url).path)
-        
-        # ファイル名が空の場合やクエリパラメータがある場合の処理
+
+        # 絶対 URL に変換し、パスを解析
+        img_url = urllib.parse.urljoin(url, src)
+        parsed = urllib.parse.urlparse(img_url)
+        rel_path = parsed.path.lstrip('/')               # 例: images/gallery/photo.jpg
+        dir_part = os.path.dirname(rel_path)             # 例: images/gallery
+        file_name = os.path.basename(rel_path)           # 例: photo.jpg
+
+        # ファイル名が空 or クエリ付きならランダム生成
         if not file_name or '?' in file_name:
-            # ランダムなファイル名を生成
-            from uuid import uuid4
-            file_extension = '.jpg'  # デフォルトの拡張子
-            
-            # Content-Typeから拡張子を推測
+            ext = '.jpg'
             try:
-                head_response = requests.head(img_url, headers=headers)
-                content_type = head_response.headers.get('Content-Type', '')
-                if 'image/jpeg' in content_type:
-                    file_extension = '.jpg'
-                elif 'image/png' in content_type:
-                    file_extension = '.png'
-                elif 'image/gif' in content_type:
-                    file_extension = '.gif'
-                elif 'image/webp' in content_type:
-                    file_extension = '.webp'
-                elif 'image/svg+xml' in content_type:
-                    file_extension = '.svg'
+                head = requests.head(img_url, headers=headers)
+                ctype = head.headers.get('Content-Type', '')
+                if 'png'    in ctype: ext = '.png'
+                elif 'gif'  in ctype: ext = '.gif'
+                elif 'webp' in ctype: ext = '.webp'
+                elif 'svg'  in ctype: ext = '.svg'
             except:
                 pass
-                
-            file_name = f"image_{uuid4().hex[:8]}{file_extension}"
-        
-        # ファイルをダウンロード
+            file_name = f"image_{uuid4().hex[:8]}{ext}"
+
+        # ローカル保存用ディレクトリを作成（階層を再現）
+        if dir_part:
+            local_dir = os.path.join(download_dir, dir_part)
+        else:
+            local_dir = download_dir
+        os.makedirs(local_dir, exist_ok=True)
+
+        # 画像をダウンロード＆保存
         try:
-            img_response = requests.get(img_url, headers=headers, stream=True)
-            img_response.raise_for_status()
-            
-            # 画像かどうかをContent-Typeでチェック
-            content_type = img_response.headers.get('Content-Type', '')
-            if not content_type.startswith('image/'):
-                print(f"スキップ: {img_url} - 画像ではありません")
+            img_resp = requests.get(img_url, headers=headers, stream=True)
+            img_resp.raise_for_status()
+            if not img_resp.headers.get('Content-Type', '').startswith('image/'):
+                print(f"スキップ（画像でない）: {img_url}")
                 continue
-                
-            # ファイルを保存
-            file_path = os.path.join(download_dir, file_name)
+
+            file_path = os.path.join(local_dir, file_name)
             with open(file_path, 'wb') as f:
-                for chunk in img_response.iter_content(chunk_size=8192):
+                for chunk in img_resp.iter_content(8192):
                     f.write(chunk)
-            
-            print(f"ダウンロード完了: {file_name}")
+            print(f"[{dir_part or '.'}] {file_name} を保存")
             download_count += 1
-            
-        except requests.exceptions.RequestException as e:
-            print(f"画像のダウンロードに失敗しました ({img_url}): {e}")
-    
-    print(f"ダウンロード完了！合計 {download_count} 個の画像をダウンロードしました。")
+
+        except requests.RequestException as e:
+            print(f"ダウンロード失敗 ({img_url}): {e}")
+
+    print(f"合計 {download_count} 個の画像をダウンロードしました。")
+
+def main():
+    parser = argparse.ArgumentParser(
+        description="指定ページの画像をディレクトリ構造を保ってまとめてダウンロード"
+    )
+    parser.add_argument(
+        "url",
+        nargs="?",
+        help="画像をダウンロードするウェブページのURL"
+    )
+    parser.add_argument(
+        "-o", "--output",
+        nargs="?",
+        help="保存先ディレクトリ (デフォルト: downloaded_images)",
+        default=None
+    )
+    args = parser.parse_args()
+
+    # 引数がなければ対話形式で入力を促す
+    if not args.url:
+        args.url = input("ダウンロードするページのURLを入力してください: ").strip()
+    if not args.output:
+        out = input("保存先ディレクトリを入力してください (デフォルト: downloaded_images): ").strip()
+        args.output = out if out else "downloaded_images"
+
+    download_images_from_page(args.url, args.output)
 
 if __name__ == "__main__":
-    # 使用例
-    target_url = input("画像をダウンロードするウェブページのURLを入力してください: ")
-    download_directory = input("ダウンロード先ディレクトリを入力してください (デフォルト: 'downloaded_images'): ")
-    
-    if not download_directory:
-        download_directory = 'downloaded_images'
-    
-    download_images_from_page(target_url, download_directory)
+    main()

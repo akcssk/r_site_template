@@ -187,19 +187,6 @@
 	width: 100%;
 }
 
-.itemDetail>div dt {
-	color: #ad073b;
-	font-weight: bold;
-	font-size: 1.2em;
-}
-
-.itemDetail>div dd {
-	padding: 0;
-	margin: 0;
-	width: 100%;
-	font-size: 1.2em;
-	line-height: 1.6em;
-}
 
 .itemDetail>div ul.comment li {
 	padding: 15px;
@@ -334,7 +321,7 @@ table.itemInfo {
 2階層目以降への指定
 ************************************************************************************************************************/
 .mainContents>h3 {
-	background: url(../images/common/h2Bg.png) left top no-repeat #6e001a;
+	background: url(https://www.rivage.jp/images/common/h2Bg.png) left top no-repeat #6e001a;
 	padding: 20px 0;
 	margin-bottom: 20px;
 	text-align: center;

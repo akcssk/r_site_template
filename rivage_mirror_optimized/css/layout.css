@@ -13,6 +13,13 @@ body {
 	-moz-osx-font-smoothing: grayscale;
 }
 
+/* タブレットサイズのフッター位置修正 */
+@media only screen and (min-width: 769px) and (max-width: 1199px) {
+    .container {
+		max-height: 100vh;    /* 画面高さまで */
+		overflow-y: auto;   
+    }
+}
 .wrapper {
 	display: table;
 	width: 100%;
@@ -62,6 +69,11 @@ body {
 	.mainContents {
 		flex: 100%;
 	}
+	@media (max-width: 1200px) {
+		.mainContent {
+		  width: 100%;
+		}
+	  }
 
 	/************************************************************
      ヘッダー(SP)
@@ -69,7 +81,7 @@ body {
 	.headerArea {
 		position: relative;
 		height: 300px;
-		background: url(/images_sp/mainImg2nd.jpg) center top no-repeat;
+		background: url(https://www.rivage.jp/images_sp/mainImg2nd.jpg) center top no-repeat;
 		background-size: cover;
 	}
 
@@ -108,6 +120,7 @@ body {
 
 	.mainContents {
 		margin: 10px 10px;
+		flex: 1;
 	}
 }
 
@@ -127,7 +140,7 @@ body {
 		width: 100%;
 		height: 500px;
 		padding: 20px 0;
-		background: url(/images/mainImg/mainImg1.jpg) center center no-repeat;
+		background: url(https://www.rivage.jp/images/mainImg/mainImg1.jpg) center center no-repeat;
 		background-size: cover;
 	}
 
@@ -350,7 +363,7 @@ footer a:hover {
 	margin-bottom: 30px;
 	text-align: center;
 	vertical-align: middle;
-	background: url(/images/common/leafBgWhite.png) left top #eeeeee;
+	background: url(https://www.rivage.jp/images/common/leafBgWhite.png) left top #eeeeee;
 	background-size: contain;
 	font-family: "游明朝", "Yu Mincho", "游明朝体", "YuMincho", 'Noto Serif', 'Sawarabi Mincho', "ヒラギノ明朝 Pro W3", "Hiragino Mincho Pro", "HiraMinProN-W3", "ＭＳ Ｐ明朝", "MS PMincho", serif;
 }
@@ -375,7 +388,7 @@ footer a:hover {
 
 .leftCategoryL h2 {
 	position: relative;
-	background: url(/images/menu/lCateLeaf.png) left top no-repeat #9b1e3b;
+	background: url(https://www.rivage.jp/images/menu/lCateLeaf.png) left top no-repeat #9b1e3b;
 	background-size: cover;
 	border-radius: 5px;
 	padding: 20px 0;
@@ -390,7 +403,7 @@ footer a:hover {
 	position: absolute;
 	top: 8px;
 	left: 7px;
-	background: url(/images/menu/lCateLeafAfter.png) left top no-repeat;
+	background: url(https://www.rivage.jp/images/menu/lCateLeafAfter.png) left top no-repeat;
 	width: 236px;
 	height: 57px;
 }
@@ -499,4 +512,47 @@ footer a:hover {
 
 #page-top a:hover {
 	opacity: 1;
+}
+
+
+
+/* 見出しスタイルの統一 */
+h4 {
+	color: #ad073b;
+	font-size: 1.4em;
+	margin-bottom: 15px;
+	font-weight: bold;
+	border-left: 4px solid #ad073b;
+	padding-left: 10px;
+}
+
+h5 {
+	color: #ad073b;
+	font-size: 1.2em;
+	margin-bottom: 12px;
+	font-weight: bold;
+	background: linear-gradient(to right, rgba(173, 7, 59, 0.1), rgba(173, 7, 59, 0.05));
+	padding: 8px 12px;
+	border-radius: 0 4px 4px 0;
+}
+
+h6 {
+	color: #ad073b;
+	font-size: 1.1em;
+	margin-bottom: 10px;
+	font-weight: bold;
+	text-align: center;
+	position: relative;
+	padding-bottom: 8px;
+}
+
+h6:after {
+	content: "";
+	position: absolute;
+	bottom: 0;
+	left: 50%;
+	transform: translateX(-50%);
+	width: 50px;
+	height: 2px;
+	background-color: #ad073b;
 }
